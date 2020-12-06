@@ -8,5 +8,11 @@ class SessionsController < ApplicationController
     
     def home
     end
-    
+
+    # logout
+    def destroy
+        session.clear
+        redirect_to '/'
+    end
+
 end
