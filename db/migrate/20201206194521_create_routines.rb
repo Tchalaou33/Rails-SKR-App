@@ -4,7 +4,7 @@ class CreateRoutines < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :season
       t.string :step
-      t.string :product
+  
 
       t.timestamps
     end

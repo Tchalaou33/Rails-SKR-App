@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :products
   resources :routines
 
   # THIS LINE OF CODE IS THE INDEX OR HOME. i'M CALLING IT WELCOME

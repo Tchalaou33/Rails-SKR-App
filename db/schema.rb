@@ -10,15 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_06_194521) do
+ActiveRecord::Schema.define(version: 2020_12_07_142342) do
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.integer "rating"
+    t.string "step"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "routines", force: :cascade do |t|
     t.string "title"
     t.string "season"
     t.string "step"
-    t.string "product"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "product_id"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
