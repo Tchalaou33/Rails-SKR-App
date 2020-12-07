@@ -1,3 +1,8 @@
 <h1> Show Me</h1>
 
 <%= @routine.title %> is for <% @routine.season%> season and 
+<br></br>
+
+<%= link_to "Edit Routine", edit_routine_path(@routine) %>
+<%= link_to "Delete Routine", routine_path(@routine), method: :delete %>
+

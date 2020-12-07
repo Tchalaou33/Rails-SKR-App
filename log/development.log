@@ -2951,3 +2951,339 @@ Processing by RoutinesController#show as HTML
 Completed 200 OK in 119ms (Views: 83.4ms | ActiveRecord: 5.3ms | Allocations: 14540)
 
 
+Started GET "/routines/6" for ::1 at 2020-12-07 06:40:17 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:43:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 126)
+Completed 200 OK in 21ms (Views: 11.0ms | ActiveRecord: 0.3ms | Allocations: 9630)
+
+
+Started GET "/routines/6/edit" for ::1 at 2020-12-07 06:40:21 -0500
+Processing by RoutinesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:43:in `set_routine'
+  Rendering routines/edit.html.erb within layouts/application
+  Rendered routines/edit.html.erb within layouts/application (Duration: 7.0ms | Allocations: 3293)
+Completed 200 OK in 22ms (Views: 18.0ms | ActiveRecord: 0.2ms | Allocations: 6441)
+
+
+Started GET "/routines/6/edit" for ::1 at 2020-12-07 06:40:55 -0500
+Processing by RoutinesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:43:in `set_routine'
+  Rendering routines/edit.html.erb within layouts/application
+  Rendered routines/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1299)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.3ms | Allocations: 3556)
+
+
+Started GET "/routines/6/edit" for ::1 at 2020-12-07 06:41:16 -0500
+Processing by RoutinesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:43:in `set_routine'
+  Rendering routines/edit.html.erb within layouts/application
+  Rendered routines/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1628)
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 0.3ms | Allocations: 4775)
+
+
+Started GET "/routines/6" for ::1 at 2020-12-07 06:52:32 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 133)
+Completed 200 OK in 18ms (Views: 9.8ms | ActiveRecord: 0.4ms | Allocations: 8130)
+
+
+Started GET "/routines/6/index" for ::1 at 2020-12-07 06:53:08 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/routines/6/index"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/routines/6" for ::1 at 2020-12-07 06:53:25 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:57:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 490)
+Completed 200 OK in 22ms (Views: 11.4ms | ActiveRecord: 1.5ms | Allocations: 11456)
+
+
+Started GET "/routines/6" for ::1 at 2020-12-07 06:54:08 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:57:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 215)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 0.2ms | Allocations: 3517)
+
+
+Started GET "/routines/6" for ::1 at 2020-12-07 06:57:17 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:57:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 245)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 0.3ms | Allocations: 3541)
+
+
+Started GET "/routines/6" for ::1 at 2020-12-07 07:00:08 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:58:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 125)
+Completed 200 OK in 21ms (Views: 8.1ms | ActiveRecord: 1.5ms | Allocations: 8325)
+
+
+Started GET "/routines/6" for ::1 at 2020-12-07 07:00:22 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:58:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 84)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.3ms | Allocations: 2485)
+
+
+Started GET "/routines/6" for ::1 at 2020-12-07 07:08:00 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/mnt/c/Users/DreaTu/skincare-routine/app/controllers/routines_controller.rb:62: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/routines_controller.rb:62: syntax error, unexpected end, expecting end-of-input
+app/controllers/routines_controller.rb:62: syntax error, unexpected end, expecting end-of-input
+app/controllers/routines_controller.rb:62: syntax error, unexpected end, expecting end-of-input
+Started GET "/routines/6" for ::1 at 2020-12-07 07:08:40 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:50:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 251)
+Completed 200 OK in 23ms (Views: 12.9ms | ActiveRecord: 1.3ms | Allocations: 8776)
+
+
+Started GET "/routines/6" for ::1 at 2020-12-07 07:08:42 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:50:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 90)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.3ms | Allocations: 2495)
+
+
+Started GET "/routines/6/edit" for ::1 at 2020-12-07 07:17:06 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:50:in `set_routine'
+  Rendering routines/edit.html.erb within layouts/application
+  Rendered routines/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1756)
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 0.3ms | Allocations: 4164)
+
+
+Started GET "/routines/6" for ::1 at 2020-12-07 07:18:53 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:50:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 238)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.3ms | Allocations: 3531)
+
+
+Started GET "/routines/6" for ::1 at 2020-12-07 07:18:55 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:50:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 85)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.3ms | Allocations: 2490)
+
+
+Started GET "/routines/6" for ::1 at 2020-12-07 07:21:58 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 251)
+Completed 200 OK in 25ms (Views: 13.7ms | ActiveRecord: 1.5ms | Allocations: 8788)
+
+
+Started GET "/routines/6" for ::1 at 2020-12-07 07:22:04 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 90)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.3ms | Allocations: 2491)
+
+
+Started GET "/routines/6/edit" for ::1 at 2020-12-07 07:22:09 -0500
+Processing by RoutinesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/edit.html.erb within layouts/application
+  Rendered routines/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1669)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 4057)
+
+
+Started GET "/routines/5" for ::1 at 2020-12-07 07:22:40 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 85)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.2ms | Allocations: 2487)
+
+
+Started GET "/routines" for ::1 at 2020-12-07 07:24:33 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:5
+  Rendered routines/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3358)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms | Allocations: 4364)
+
+
+  
+ActionView::Template::Error (undefined method `user' for #<Routine:0x00007fffd22801c0>
+Did you mean?  super):
+     6:       <h4><a href="/routines/<%= routine.id %>"><%= 
+     7:       routine.created_at %></a></h4>
+     8:       <p><%= routine.title %></p>
+     9:       <p>By <%= routine.user.name %></p>
+    10:       <br><br>
+    11:   <% end %>
+  
+app/views/routines/index.html.erb:9
+app/views/routines/index.html.erb:5
+Started GET "/routines" for ::1 at 2020-12-07 07:26:11 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:5
+  Rendered routines/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3275)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms | Allocations: 4281)
+
+
+  
+ActionView::Template::Error (undefined method `username' for #<Routine:0x00007fd318269df8>):
+     6:       <h4><a href="/routines/<%= routine.id %>"><%= 
+     7:       routine.created_at %></a></h4>
+     8:       <p><%= routine.title %></p>
+     9:       <p>By <%= routine.username %></p>
+    10:       <br><br>
+    11:   <% end %>
+  
+app/views/routines/index.html.erb:9
+app/views/routines/index.html.erb:5
+Started GET "/routines" for ::1 at 2020-12-07 07:26:27 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:5
+  Rendered routines/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3242)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms | Allocations: 4248)
+
+
+  
+ActionView::Template::Error (undefined method `username' for #<Routine:0x00007fffd0744aa0>):
+     6:       <h4><a href="/routines/<%= routine.id %>"><%= 
+     7:       routine.created_at %></a></h4>
+     8:       <p><%= routine.title %></p>
+     9:       <p>By <%= routine.username.name %></p>
+    10:       <br><br>
+    11:   <% end %>
+  
+app/views/routines/index.html.erb:9
+app/views/routines/index.html.erb:5
+Started GET "/routines" for ::1 at 2020-12-07 07:27:34 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:5
+  Rendered routines/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3245)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms | Allocations: 4252)
+
+
+  
+ActionView::Template::Error (undefined method `username' for #<Routine:0x00007fd3183401c8>):
+     6:       <h4><a href="/routines/<%= routine.id %>"><%= 
+     7:       routine.created_at %></a></h4>
+     8:       <p><%= routine.title %></p>
+     9:     #   <p>By <%= routine.username.name %></p>
+    10:       <br><br>
+    11:   <% end %>
+  
+app/views/routines/index.html.erb:9
+app/views/routines/index.html.erb:5
+Started GET "/routines" for ::1 at 2020-12-07 07:28:15 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:5
+  Rendered routines/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1032)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.4ms | Allocations: 3797)
+
+
+Started GET "/routines" for ::1 at 2020-12-07 07:29:26 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:5
+  Rendered routines/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 887)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms | Allocations: 3648)
+
+

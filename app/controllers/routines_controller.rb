@@ -28,21 +28,36 @@ class RoutinesController < ApplicationController
         set_routine
     end
 
-    
+    def update
+        set_routine
+        if @routine.update(routine_params)
+            redirect_to routines_path
+        else
+            render :edit
+        end
+    end
 
-end
+    def destroy
+        set_routine
+        @routine.destroy
+        redirect_to routines_path
+    end
+
 
     # For security 
     private
+
+     def set_routine
+        @routine = Routine.find_by(id: params[:id])
+        if !@routine
+            redirect_to routines_path
+        end
+    end
 
     def routine_params
         params.require(:routine).permit(:title, :season, :step, :product)
     end
 
-    def set_routine
-        @routine = Routine.find_by(id: params[:id])
-        if !@routine
-            redirect_to routines_path
-    end
+   
 end
 
