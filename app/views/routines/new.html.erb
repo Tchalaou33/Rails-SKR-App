@@ -11,7 +11,12 @@
     <%= f.label :step %>
     <%= f.select(:step, ["Cleanse", "Treat", "Hydreate", "Protect"]) %>
 
+    <br></br>
 
+    <%= f.label :product_id, "Select a Product" %>
+    <%= f.collection_select :product_id, Product.all, :id, :title, prompt: true %>
+
+    <br></br>
     <%= f.submit "Submit" %>
 
     <% end %>

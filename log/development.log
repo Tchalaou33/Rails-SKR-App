@@ -4594,3 +4594,246 @@ Completed 500 Internal Server Error in 145ms (ActiveRecord: 0.0ms | Allocations:
 NameError (undefined local variable or method `current_user' for #<RoutinesController:0x00007fffde3a9720>):
   
 app/controllers/routines_controller.rb:9:in `create'
+Started POST "/routines" for ::1 at 2020-12-07 10:19:52 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"a5froKVNo9sZS09TuiqGQJmdmwATLfzv9bwJIza38RXBUBZ50LRZn8SRERMuwxY5usZstrbiOtSRO/XwM4nwzQ==", "routine"=>{"title"=>"Here We Go!", "season"=>"Winter", "step"=>"Treat"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 204ms (ActiveRecord: 0.0ms | Allocations: 76837)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<RoutinesController:0x00007fffdef01dc0>):
+  
+app/controllers/routines_controller.rb:9:in `create'
+Started POST "/routines" for ::1 at 2020-12-07 10:31:37 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"a5froKVNo9sZS09TuiqGQJmdmwATLfzv9bwJIza38RXBUBZ50LRZn8SRERMuwxY5usZstrbiOtSRO/XwM4nwzQ==", "routine"=>{"title"=>"Here We Go!", "season"=>"Winter", "step"=>"Treat"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 0.0ms | Allocations: 76877)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<RoutinesController:0x00007fffdeebc158>):
+  
+app/controllers/routines_controller.rb:9:in `create'
+Started POST "/routines" for ::1 at 2020-12-07 10:34:16 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"a5froKVNo9sZS09TuiqGQJmdmwATLfzv9bwJIza38RXBUBZ50LRZn8SRERMuwxY5usZstrbiOtSRO/XwM4nwzQ==", "routine"=>{"title"=>"Here We Go!", "season"=>"Winter", "step"=>"Treat"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 253ms (ActiveRecord: 0.0ms | Allocations: 76836)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<RoutinesController:0x00007f1090114cc8>):
+  
+app/controllers/routines_controller.rb:9:in `create'
+Started GET "/routines/new" for ::1 at 2020-12-07 10:34:24 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1200)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.5ms | Allocations: 8403)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1> Create A Routine!</h1>
+
+<%= form_for(@routine) do |f| %>
+    
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :season %>
+    <%= f.select(:season, options_for_select([ "Winter", "Summer"])) %>
+
+    <%= f.label :step %>
+    <%= f.select(:step, ["Cleanse", "Treat", "Hydreate", "Protect"]) %>
+
+    # <br></br>
+
+    # <% f.label :product_id, "Select a Product" %>
+    # <% f.collection_select :product_id, Product.all, :id, :title :>
+
+    <br></br>
+    <%= f.submit "Submit" %>
+
+    <% end %>
+
+
+
+
+):
+1:    <h1> Create A Routine!</h1>
+2:    
+3:    <%= form_for(@routine) do |f| %>
+4:        
+5:        <%= f.label :title %>
+6:        <%= f.text_field :title %>
+7:    
+8:        <%= f.label :season %>
+9:        <%= f.select(:season, options_for_select([ "Winter", "Summer"])) %>
+10:    
+11:        <%= f.label :step %>
+12:        <%= f.select(:step, ["Cleanse", "Treat", "Hydreate", "Protect"]) %>
+13:    
+14:        # <br></br>
+15:    
+16:        # <% f.label :product_id, "Select a Product" %>
+17:        # <% f.collection_select :product_id, Product.all, :id, :title :>
+18:    
+19:        <br></br>
+20:        <%= f.submit "Submit" %>
+21:    
+22:        <% end %>
+23:    
+24:    
+25:    
+  
+app/views/routines/new.html.erb:17: syntax error, unexpected ':', expecting end
+app/views/routines/new.html.erb:28: unterminated regexp meets end of file
+app/views/routines/new.html.erb:28: syntax error, unexpected end-of-input, expecting end
+app/views/routines/new.html.erb:17: syntax error, unexpected ':', expecting end
+app/views/routines/new.html.erb:28: unterminated regexp meets end of file
+app/views/routines/new.html.erb:28: syntax error, unexpected end-of-input, expecting end
+app/views/routines/new.html.erb:17: syntax error, unexpected ':', expecting end
+app/views/routines/new.html.erb:28: unterminated regexp meets end of file
+app/views/routines/new.html.erb:28: syntax error, unexpected end-of-input, expecting end
+app/views/routines/new.html.erb:17: syntax error, unexpected ':', expecting end
+app/views/routines/new.html.erb:28: unterminated regexp meets end of file
+app/views/routines/new.html.erb:28: syntax error, unexpected end-of-input, expecting end
+app/views/routines/new.html.erb:17: syntax error, unexpected ':', expecting end
+app/views/routines/new.html.erb:28: unterminated regexp meets end of file
+app/views/routines/new.html.erb:28: syntax error, unexpected end-of-input, expecting end
+app/views/routines/new.html.erb:17: syntax error, unexpected ':', expecting end
+app/views/routines/new.html.erb:28: unterminated regexp meets end of file
+app/views/routines/new.html.erb:28: syntax error, unexpected end-of-input, expecting end
+Started GET "/routines/new" for ::1 at 2020-12-07 10:35:10 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 52.7ms | Allocations: 8184)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.8ms | Allocations: 9199)
+
+
+  
+ActionView::Template::Error (undefined method `had_many' for #<Class:0x00007f1090389d28>
+Did you mean?  has_many):
+    14:     # <br></br>
+    15: 
+    16:     # <% f.label :product_id, "Select a Product" %>
+    17:     # <% f.collection_select :product_id, Product.all, :id, :title %>
+    18: 
+    19:     <br></br>
+    20:     <%= f.submit "Submit" %>
+  
+app/models/product.rb:3:in `<class:Product>'
+app/models/product.rb:1:in `<main>'
+app/views/routines/new.html.erb:17
+app/views/routines/new.html.erb:3
+Started GET "/routines/new" for ::1 at 2020-12-07 10:35:49 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/new.html.erb:17
+  Rendered routines/new.html.erb within layouts/application (Duration: 20.8ms | Allocations: 3618)
+Completed 200 OK in 48ms (Views: 31.7ms | ActiveRecord: 4.0ms | Allocations: 11915)
+
+
+Started POST "/routines" for ::1 at 2020-12-07 10:36:11 -0500
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"+4MhTyrFwTeUVSDHze+HJFMTwwGxDR1GYCWI1hu45ghRRNyWXzw7c0mPfodZBhddcEg0txTC230EonQFHobn0A==", "routine"=>{"title"=>"Apple", "season"=>"Winter", "step"=>"Cleanse"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 230ms (ActiveRecord: 0.0ms | Allocations: 76872)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<RoutinesController:0x00007fffdf6623d0>):
+  
+app/controllers/routines_controller.rb:9:in `create'
+Started GET "/routines/new" for ::1 at 2020-12-07 10:36:18 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/new.html.erb:17
+  Rendered routines/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1784)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.5ms | Allocations: 3618)
+
+
+Started GET "/routines/new" for ::1 at 2020-12-07 10:37:03 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/new.html.erb:17
+  Rendered routines/new.html.erb within layouts/application (Duration: 13.7ms | Allocations: 3656)
+Completed 200 OK in 69ms (Views: 24.0ms | ActiveRecord: 3.0ms | Allocations: 12619)
+
+
+Started POST "/routines" for ::1 at 2020-12-07 10:37:16 -0500
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"sQJbmZuINR8VW+c6hNB7nD8621AYnMfoU96tyMI4eVUbxaZA7nHPW8iBuXoQOevlHGEs5r1TAdM3WVEbxwZ4jQ==", "routine"=>{"title"=>"Apple", "season"=>"Summer", "step"=>"Cleanse"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 230ms (ActiveRecord: 0.0ms | Allocations: 76882)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<RoutinesController:0x00007fffdf212410>):
+  
+app/controllers/routines_controller.rb:9:in `create'
+Started POST "/routines" for ::1 at 2020-12-07 10:39:00 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"sQJbmZuINR8VW+c6hNB7nD8621AYnMfoU96tyMI4eVUbxaZA7nHPW8iBuXoQOevlHGEs5r1TAdM3WVEbxwZ4jQ==", "routine"=>{"title"=>"Apple", "season"=>"Summer", "step"=>"Cleanse"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 0.0ms | Allocations: 76839)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<RoutinesController:0x00007f1094e614e0>):
+  
+app/controllers/routines_controller.rb:9:in `create'
+Started GET "/routines/new" for ::1 at 2020-12-07 10:43:04 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/new.html.erb:17
+  Rendered routines/new.html.erb within layouts/application (Duration: 31.4ms | Allocations: 3655)
+Completed 200 OK in 57ms (Views: 41.6ms | ActiveRecord: 3.1ms | Allocations: 12574)
+
+
+Started GET "/routines/new" for ::1 at 2020-12-07 10:46:07 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/new.html.erb:17
+  Rendered routines/new.html.erb within layouts/application (Duration: 15.3ms | Allocations: 3859)
+Completed 200 OK in 43ms (Views: 24.9ms | ActiveRecord: 5.2ms | Allocations: 12770)
+
+
+Started GET "/routines/new" for ::1 at 2020-12-07 10:48:35 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 404.5ms | Allocations: 115002)
+Completed 500 Internal Server Error in 413ms (ActiveRecord: 0.0ms | Allocations: 116013)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `ture' for #<#<Class:0x00007f10902229d0>:0x00007f1090220090>
+Did you mean?  true):
+    14:     <br></br>
+    15: 
+    16:     <%= f.label :product_id, "Select a Product" %>
+    17:     <%= f.collection_select :product_id, Product.all, :id, :title, prompt: ture %>
+    18: 
+    19:     <br></br>
+    20:     <%= f.submit "Submit" %>
+  
+app/views/routines/new.html.erb:17
+app/views/routines/new.html.erb:3
+Started GET "/routines/new" for ::1 at 2020-12-07 10:49:04 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/new.html.erb:17
+  Rendered routines/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 2163)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.5ms | Allocations: 4922)
+
+
