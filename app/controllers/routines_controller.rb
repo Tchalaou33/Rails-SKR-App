@@ -15,11 +15,26 @@ class RoutinesController < ApplicationController
         end
     end
 
+    def index
+        @routines = Routine.all
+    end
+
+    def show
+        set_routine
+    end
+
+
     # For security 
     private
 
     def routine_params
         params.require(:routine).permit(:title, :season, :step, :product)
     end
+
+    def set_routine
+        @routine = Routine.find_by(id: params[:id])
+        if !@routine
+            redirect_to routines_path
+        end
 end
 
