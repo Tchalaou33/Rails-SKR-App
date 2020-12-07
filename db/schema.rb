@@ -14,6 +14,9 @@ ActiveRecord::Schema.define(version: 2020_12_06_194521) do
 
   create_table "routines", force: :cascade do |t|
     t.string "title"
+    t.string "season"
+    t.string "step"
+    t.string "product"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

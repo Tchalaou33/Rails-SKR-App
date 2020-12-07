@@ -11,3 +11,4 @@ class RoutinesController < ApplicationController
 
 end
 
+# <%= f.collections_select()
