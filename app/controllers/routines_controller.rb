@@ -17,9 +17,20 @@ class RoutinesController < ApplicationController
 
     def index
         @routines = Routine.all
+        #  set_routine
+    end
+
+    def show
         set_routine
     end
 
+    def edit
+        set_routine
+    end
+
+    
+
+end
 
     # For security 
     private
@@ -32,6 +43,6 @@ class RoutinesController < ApplicationController
         @routine = Routine.find_by(id: params[:id])
         if !@routine
             redirect_to routines_path
-        end
+    end
 end
 

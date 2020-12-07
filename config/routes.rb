@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
-  resources :routines, only:[:new, :create, :index]
+  resources :routines
+
   # THIS LINE OF CODE IS THE INDEX OR HOME. i'M CALLING IT WELCOME
   root 'sessions#welcome' 
 
@@ -9,5 +10,6 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
   resources :users
+  # , only:[:show]
   
 end
