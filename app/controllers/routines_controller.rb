@@ -8,7 +8,7 @@ class RoutinesController < ApplicationController
     def create
         @routine = current_user.routines.build(routine_params)
 
-        if @routine.save!
+        if @routine.save
             redirect_to routine_path(@routine)
         else
             render :new
@@ -55,7 +55,7 @@ class RoutinesController < ApplicationController
     end
 
     def routine_params
-        params.require(:routine).permit(:title, :season, :step)
+        params.require(:routine).permit(:title, :season, :step, :product_id)
     end
 
    
