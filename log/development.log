@@ -3649,3 +3649,559 @@ Processing by RoutinesController#index as HTML
 Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.2ms | Allocations: 3685)
 
 
+Started GET "/routines" for ::1 at 2020-12-07 08:09:14 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:6
+  Rendered routines/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 729)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.3ms | Allocations: 2609)
+
+
+Started GET "/routines" for ::1 at 2020-12-07 08:09:19 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:6
+  Rendered routines/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 729)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 2606)
+
+
+Started GET "/logout" for ::1 at 2020-12-07 08:09:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/logout" for ::1 at 2020-12-07 08:10:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/routines" for ::1 at 2020-12-07 08:10:25 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:6
+  Rendered routines/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 886)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.3ms | Allocations: 3722)
+
+
+Started GET "/logout" for ::1 at 2020-12-07 08:10:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/logout" for ::1 at 2020-12-07 08:10:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/routines" for ::1 at 2020-12-07 08:10:57 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:6
+  Rendered routines/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 728)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 2635)
+
+
+Started GET "/logout" for ::1 at 2020-12-07 08:11:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/routines" for ::1 at 2020-12-07 08:19:20 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:6
+  Rendered routines/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 6005)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 0.4ms | Allocations: 11055)
+
+
+Started GET "/" for ::1 at 2020-12-07 08:19:49 -0500
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.8ms | Allocations: 188)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 2619)
+
+
+Started GET "/logout" for ::1 at 2020-12-07 08:19:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-12-07 08:20:00 -0500
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.2ms | Allocations: 58)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 1944)
+
+
+Started GET "/login" for ::1 at 2020-12-07 08:20:01 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1039)
+Completed 200 OK in 20ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 8658)
+
+
+Started POST "/users" for ::1 at 2020-12-07 08:20:09 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"yEV+4bhvQo8n6sm20sbBHNkv++DpKNY0VswVCsJHYaysaoKgFANt4Dj1JDFOe5saf7HUHht0kp+DTqkPexVzDQ==", "user"=>{"username"=>"Pear", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1057)
+Completed 200 OK in 209ms (Views: 10.8ms | ActiveRecord: 0.8ms | Allocations: 7100)
+
+
+Started POST "/users" for ::1 at 2020-12-07 08:20:21 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"yEV+4bhvQo8n6sm20sbBHNkv++DpKNY0VswVCsJHYaysaoKgFANt4Dj1JDFOe5saf7HUHht0kp+DTqkPexVzDQ==", "user"=>{"username"=>"Pear", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 773)
+Completed 200 OK in 202ms (Views: 6.9ms | ActiveRecord: 0.7ms | Allocations: 6075)
+
+
+Started GET "/routines" for ::1 at 2020-12-07 08:31:11 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:6
+  Rendered routines/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 5149)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.3ms | Allocations: 7553)
+
+
+Started GET "/routine" for ::1 at 2020-12-07 08:31:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/routine"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/routines" for ::1 at 2020-12-07 08:32:02 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:6
+  Rendered routines/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 728)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.4ms | Allocations: 2637)
+
+
+Started GET "/routines/new" for ::1 at 2020-12-07 08:32:13 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1170)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1575)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1> Create A Routine!</h1>
+
+<%= form_for(@routine) do |f| %>
+    
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :season %>Hydrate", "Protect"]) %>
+
+    <%= f.select(:season, options_for_select([ "Winter", "Summer"])) %>
+
+    <%= f.label :step %>
+    <%= f.select(:step, ["Cleanse", "Treat", "
+    <%= f.label :product %>
+    <%= f.text_field :title %>
+
+    <%= f.submit "Create" %>
+
+    <% end %>
+
+
+
+
+):
+1:    <h1> Create A Routine!</h1>
+2:    
+3:    <%= form_for(@routine) do |f| %>
+4:        
+5:        <%= f.label :title %>
+6:        <%= f.text_field :title %>
+7:    
+8:        <%= f.label :season %>Hydrate", "Protect"]) %>
+9:    
+10:        <%= f.select(:season, options_for_select([ "Winter", "Summer"])) %>
+11:    
+12:        <%= f.label :step %>
+13:        <%= f.select(:step, ["Cleanse", "Treat", "
+14:        <%= f.label :product %>
+15:        <%= f.text_field :title %>
+16:    
+17:        <%= f.submit "Create" %>
+18:    
+19:        <% end %>
+20:    
+21:    
+22:    
+  
+app/views/routines/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ']'
+app/views/routines/new.html.erb:25: unterminated string meets end of file
+app/views/routines/new.html.erb:25: syntax error, unexpected end-of-input, expecting ')'
+app/views/routines/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ']'
+app/views/routines/new.html.erb:25: unterminated string meets end of file
+app/views/routines/new.html.erb:25: syntax error, unexpected end-of-input, expecting ')'
+app/views/routines/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ']'
+app/views/routines/new.html.erb:25: unterminated string meets end of file
+app/views/routines/new.html.erb:25: syntax error, unexpected end-of-input, expecting ')'
+app/views/routines/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ']'
+app/views/routines/new.html.erb:25: unterminated string meets end of file
+app/views/routines/new.html.erb:25: syntax error, unexpected end-of-input, expecting ')'
+app/views/routines/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ']'
+app/views/routines/new.html.erb:25: unterminated string meets end of file
+app/views/routines/new.html.erb:25: syntax error, unexpected end-of-input, expecting ')'
+app/views/routines/new.html.erb:17: syntax error, unexpected tCONSTANT, expecting ']'
+app/views/routines/new.html.erb:25: unterminated string meets end of file
+app/views/routines/new.html.erb:25: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/routines/new" for ::1 at 2020-12-07 08:37:07 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1215)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2227)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1> Create A Routine!</h1>
+
+<%= form_for(@routine) do |f| %>
+    
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :season %>Hydrate", "Protect"]) %>
+    <%= f.select(:season, options_for_select([ "Winter", "Summer"])) %>
+
+    <%= f.label :step %>
+    <%= f.select(:step, ["Cleanse", "Treat", "Hydreat", "Protect"])) %>
+
+    <%= f.label :product %>
+    <%= f.text_field :title %>
+
+    <%= f.submit "Submit" %>
+
+    <% end %>
+
+
+
+
+):
+1:    <h1> Create A Routine!</h1>
+2:    
+3:    <%= form_for(@routine) do |f| %>
+4:        
+5:        <%= f.label :title %>
+6:        <%= f.text_field :title %>
+7:    
+8:        <%= f.label :season %>Hydrate", "Protect"]) %>
+9:        <%= f.select(:season, options_for_select([ "Winter", "Summer"])) %>
+10:    
+11:        <%= f.label :step %>
+12:        <%= f.select(:step, ["Cleanse", "Treat", "Hydreat", "Protect"])) %>
+13:    
+14:        <%= f.label :product %>
+15:        <%= f.text_field :title %>
+16:    
+17:        <%= f.submit "Submit" %>
+18:    
+19:        <% end %>
+20:    
+21:    
+22:    
+  
+app/views/routines/new.html.erb:12: syntax error, unexpected ')', expecting end
+app/views/routines/new.html.erb:25: syntax error, unexpected end, expecting end-of-input
+app/views/routines/new.html.erb:12: syntax error, unexpected ')', expecting end
+app/views/routines/new.html.erb:25: syntax error, unexpected end, expecting end-of-input
+app/views/routines/new.html.erb:12: syntax error, unexpected ')', expecting end
+app/views/routines/new.html.erb:25: syntax error, unexpected end, expecting end-of-input
+app/views/routines/new.html.erb:12: syntax error, unexpected ')', expecting end
+app/views/routines/new.html.erb:25: syntax error, unexpected end, expecting end-of-input
+app/views/routines/new.html.erb:12: syntax error, unexpected ')', expecting end
+app/views/routines/new.html.erb:25: syntax error, unexpected end, expecting end-of-input
+app/views/routines/new.html.erb:12: syntax error, unexpected ')', expecting end
+app/views/routines/new.html.erb:25: syntax error, unexpected end, expecting end-of-input
+Started GET "/routines/new" for ::1 at 2020-12-07 08:37:40 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 16.0ms | Allocations: 3774)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.0ms | Allocations: 6454)
+
+
+Started GET "/routines/new" for ::1 at 2020-12-07 08:38:05 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1578)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 4251)
+
+
+Started GET "/routines/new" for ::1 at 2020-12-07 08:40:31 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1579)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 4252)
+
+
+Started POST "/routines" for ::1 at 2020-12-07 08:41:28 -0500
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"yAGim24Rg5xEASt87YqFUIk1Pb1bq7dqUJbGrgnZ+/9ixl9CG+h52JnbdTx5YxUpqm7KC/5kcVE0ETp9DOf6Jw==", "routine"=>{"title"=>"Tatcha Luminous Dewy Skin Sheet Mask", "season"=>"Winter", "step"=>"Hydreate"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/routines_controller.rb:11:in `create'
+  [1m[36mRoutine Create (1.5ms)[0m  [1m[32mINSERT INTO "routines" ("title", "season", "step", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Tatcha Luminous Dewy Skin Sheet Mask"], ["season", "Winter"], ["step", "Hydreate"], ["created_at", "2020-12-07 13:41:28.357810"], ["updated_at", "2020-12-07 13:41:28.357810"]]
+  ↳ app/controllers/routines_controller.rb:11:in `create'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/routines_controller.rb:11:in `create'
+Redirected to http://localhost:3000/routines/8
+Completed 302 Found in 11ms (ActiveRecord: 3.1ms | Allocations: 5488)
+
+
+Started GET "/routines/8" for ::1 at 2020-12-07 08:41:28 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 242)
+Completed 200 OK in 13ms (Views: 8.1ms | ActiveRecord: 0.5ms | Allocations: 2945)
+
+
+Started GET "/routines/8/edit" for ::1 at 2020-12-07 08:41:31 -0500
+Processing by RoutinesController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/edit.html.erb within layouts/application
+  Rendered routines/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1626)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 4051)
+
+
+Started PATCH "/routines/8" for ::1 at 2020-12-07 08:41:45 -0500
+Processing by RoutinesController#update as HTML
+  Parameters: {"authenticity_token"=>"kJmI6mer11+pB6QuoX5qNHa/M9JUr6cDy8YL+gBA/aM4ecd86yvVUzOOQbQ1Sod2OFVncXlHVyTT+gzvI9Xunw==", "routine"=>{"title"=>"Tatcha Luminous Dewy Skin Sheet Mask", "season"=>"Winter", "step"=>"Hydrate"}, "commit"=>"Update", "id"=>"8"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/routines_controller.rb:33:in `update'
+  [1m[36mRoutine Update (1.4ms)[0m  [1m[33mUPDATE "routines" SET "step" = ?, "updated_at" = ? WHERE "routines"."id" = ?[0m  [["step", "Hydrate"], ["updated_at", "2020-12-07 13:41:45.817391"], ["id", 8]]
+  ↳ app/controllers/routines_controller.rb:33:in `update'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/routines_controller.rb:33:in `update'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 14ms (ActiveRecord: 3.3ms | Allocations: 6567)
+
+
+Started GET "/routines" for ::1 at 2020-12-07 08:41:45 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:6
+  Rendered routines/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 906)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 2958)
+
+
