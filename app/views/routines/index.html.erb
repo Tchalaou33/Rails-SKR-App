@@ -3,16 +3,21 @@
 # Users can see all routines created. but can not edit unless its their own
 # add name of user that routine belongs to
 
-  # <%= @routines.each do |routine| %>
-  #     <h4><a href="/routines/<%= routine.id %>"></a></h4>
-  #     <p><%= routine.title %></p>
-  #     <br><br>
 
-  # <% end %>
+<%= form_tag('/routines', method: "get") do %>
+  <%= label_tag(:season, "Season") %>
+  <%= select_tag(:season, options_for_select([ "Winter", "Summer"])) %>
+  <%=submit_tag("Search") %>
 
-  <%= form_tag('/routines', method: "get") do %>
-    <%= label_tag(:season, "Season") %>
-    <%= select_tag(:season, options_for_select([ "Winter", "Summer"])) %>
-    <%=submit_tag("Search") %>
-  <% end %>
 
+<br></br>
+# <% end %>
+
+<%= @routines.each do |routine| %>
+  <h4><a href="/routines/<%= routine.id %>"></a></h4>
+  <p><%= @routine.title %></p>
+  # <p>By <%= @routine.username %></p>
+
+<br><br>
+
+<% end %>

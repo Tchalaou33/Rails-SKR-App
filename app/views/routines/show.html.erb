@@ -1,8 +1,20 @@
 <h1> Show Me</h1>
 
-<%= @routine.title %> is for <% @routine.season%> season and 
+
+
+<%= @routine.title %> 
 <br></br>
 
-<%= link_to "Edit Routine", edit_routine_path(@routine) %>
-<%= link_to "Delete Routine", routine_path(@routine), method: :delete %>
+
+<%= @routine.season %> 
+<br></br>
+
+<%= @routine.step %>
+<br></br>
+
+<%= button_to "Edit Routine", edit_routine_path(@routine) %>
+<%= button_to "Delete Routine", routine_path(@routine), method: :delete %>
+
+
+# how to show user that belongs_to routine <%= @user[:username]
 

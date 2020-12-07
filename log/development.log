@@ -5032,3 +5032,1312 @@ Processing by RoutinesController#index as HTML
 Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.4ms | Allocations: 2744)
 
 
+Started GET "/routines?season=Summer&commit=Search" for ::1 at 2020-12-07 12:52:42 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#index as HTML
+  Parameters: {"season"=>"Summer", "commit"=>"Search"}
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:6
+  Rendered routines/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1643)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.4ms | Allocations: 3906)
+
+
+Started GET "/routines" for ::1 at 2020-12-07 13:46:10 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.7ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:6
+  Rendered routines/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 774)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.7ms | Allocations: 2766)
+
+
+Started GET "/routines" for ::1 at 2020-12-07 13:50:15 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:15
+  Rendered routines/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1975)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.4ms | Allocations: 7125)
+
+
+Started GET "/routines" for ::1 at 2020-12-07 13:50:20 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.7ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:15
+  Rendered routines/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1041)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.7ms | Allocations: 3945)
+
+
+Started GET "/routines" for ::1 at 2020-12-07 13:57:35 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  Rendered routines/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1159)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3058)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>All Routines</h1>
+
+# Users can see all routines created. but can not edit unless its their own
+# add name of user that routine belongs to
+
+
+  <%= form_tag('/routines', method: "get") do %>
+    <%= label_tag(:season, "Season") %>
+    <%= select_tag(:season, options_for_select([ "Winter", "Summer"])) %>
+    <%=submit_tag("Search") %>
+
+
+  <br></br>
+
+
+  <%= @routines.each do |routine| %>
+     <h4><a href="/routines/<%= routine.id %>"></a></h4>
+     <p><%= routine.title %></p>
+     <p>By <%= routine.user.name %></p>
+  <br><br>
+
+ <% end %>
+):
+1:    <h1>All Routines</h1>
+2:    
+3:    # Users can see all routines created. but can not edit unless its their own
+4:    # add name of user that routine belongs to
+5:    
+6:    
+7:      <%= form_tag('/routines', method: "get") do %>
+8:        <%= label_tag(:season, "Season") %>
+9:        <%= select_tag(:season, options_for_select([ "Winter", "Summer"])) %>
+10:        <%=submit_tag("Search") %>
+11:    
+12:    
+13:      <br></br>
+14:    
+15:    
+16:      <%= @routines.each do |routine| %>
+17:         <h4><a href="/routines/<%= routine.id %>"></a></h4>
+18:         <p><%= routine.title %></p>
+19:         <p>By <%= routine.user.name %></p>
+20:      <br><br>
+21:    
+22:     <% end %>
+  
+app/views/routines/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+Started GET "/routines" for ::1 at 2020-12-07 13:59:54 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  Rendered routines/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1152)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2160)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>All Routines</h1>
+
+# Users can see all routines created. but can not edit unless its their own
+# add name of user that routine belongs to
+
+
+<%= form_tag('/routines', method: "get") do %>
+  <%= label_tag(:season, "Season") %>
+  <%= select_tag(:season, options_for_select([ "Winter", "Summer"])) %>
+  <%=submit_tag("Search") %>
+
+
+<br></br>
+
+
+<%= @routines.each do |routine| %>
+  <h4><a href="/routines/<%= routine.id %>"></a></h4>
+  <p><%= routine.title %></p>
+  <p>By <%= routine.user.name %></p>
+<br><br>
+
+<% end %>
+):
+1:    <h1>All Routines</h1>
+2:    
+3:    # Users can see all routines created. but can not edit unless its their own
+4:    # add name of user that routine belongs to
+5:    
+6:    
+7:    <%= form_tag('/routines', method: "get") do %>
+8:      <%= label_tag(:season, "Season") %>
+9:      <%= select_tag(:season, options_for_select([ "Winter", "Summer"])) %>
+10:      <%=submit_tag("Search") %>
+11:    
+12:    
+13:    <br></br>
+14:    
+15:    
+16:    <%= @routines.each do |routine| %>
+17:      <h4><a href="/routines/<%= routine.id %>"></a></h4>
+18:      <p><%= routine.title %></p>
+19:      <p>By <%= routine.user.name %></p>
+20:    <br><br>
+21:    
+22:    <% end %>
+  
+app/views/routines/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+Started GET "/routines?season=Summer&commit=Search" for ::1 at 2020-12-07 13:59:59 -0500
+Processing by RoutinesController#index as HTML
+  Parameters: {"season"=>"Summer", "commit"=>"Search"}
+  Rendering routines/index.html.erb within layouts/application
+  Rendered routines/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1138)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1406)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>All Routines</h1>
+
+# Users can see all routines created. but can not edit unless its their own
+# add name of user that routine belongs to
+
+
+<%= form_tag('/routines', method: "get") do %>
+  <%= label_tag(:season, "Season") %>
+  <%= select_tag(:season, options_for_select([ "Winter", "Summer"])) %>
+  <%=submit_tag("Search") %>
+
+
+<br></br>
+
+
+<%= @routines.each do |routine| %>
+  <h4><a href="/routines/<%= routine.id %>"></a></h4>
+  <p><%= routine.title %></p>
+  <p>By <%= routine.user.name %></p>
+<br><br>
+
+<% end %>
+):
+1:    <h1>All Routines</h1>
+2:    
+3:    # Users can see all routines created. but can not edit unless its their own
+4:    # add name of user that routine belongs to
+5:    
+6:    
+7:    <%= form_tag('/routines', method: "get") do %>
+8:      <%= label_tag(:season, "Season") %>
+9:      <%= select_tag(:season, options_for_select([ "Winter", "Summer"])) %>
+10:      <%=submit_tag("Search") %>
+11:    
+12:    
+13:    <br></br>
+14:    
+15:    
+16:    <%= @routines.each do |routine| %>
+17:      <h4><a href="/routines/<%= routine.id %>"></a></h4>
+18:      <p><%= routine.title %></p>
+19:      <p>By <%= routine.user.name %></p>
+20:    <br><br>
+21:    
+22:    <% end %>
+  
+app/views/routines/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+Started GET "/routines?season=Summer&commit=Search" for ::1 at 2020-12-07 14:10:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#index as HTML
+  Parameters: {"season"=>"Summer", "commit"=>"Search"}
+  Rendering routines/index.html.erb within layouts/application
+  Rendered routines/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1153)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2161)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>All Routines</h1>
+
+# Users can see all routines created. but can not edit unless its their own
+# add name of user that routine belongs to
+
+
+<%= form_tag('/routines', method: "get") do %>
+  <%= label_tag(:season, "Season") %>
+  <%= select_tag(:season, options_for_select([ "Winter", "Summer"])) %>
+  <%=submit_tag("Search") %>
+
+
+<br></br>
+
+
+<%= @routines.each do |routine| %>
+  <h4><a href="/routines/<%= routine.id %>"></a></h4>
+  <p><%= @routine.title %></p>
+  <p>By <%= @routine.username %></p>
+  
+<br><br>
+
+<% end %>
+):
+1:    <h1>All Routines</h1>
+2:    
+3:    # Users can see all routines created. but can not edit unless its their own
+4:    # add name of user that routine belongs to
+5:    
+6:    
+7:    <%= form_tag('/routines', method: "get") do %>
+8:      <%= label_tag(:season, "Season") %>
+9:      <%= select_tag(:season, options_for_select([ "Winter", "Summer"])) %>
+10:      <%=submit_tag("Search") %>
+11:    
+12:    
+13:    <br></br>
+14:    
+15:    
+16:    <%= @routines.each do |routine| %>
+17:      <h4><a href="/routines/<%= routine.id %>"></a></h4>
+18:      <p><%= @routine.title %></p>
+19:      <p>By <%= @routine.username %></p>
+20:      
+21:    <br><br>
+22:    
+23:    <% end %>
+  
+app/views/routines/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+Started GET "/routines?season=Winter&commit=Search" for ::1 at 2020-12-07 14:10:45 -0500
+Processing by RoutinesController#index as HTML
+  Parameters: {"season"=>"Winter", "commit"=>"Search"}
+  Rendering routines/index.html.erb within layouts/application
+  Rendered routines/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1139)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1407)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>All Routines</h1>
+
+# Users can see all routines created. but can not edit unless its their own
+# add name of user that routine belongs to
+
+
+<%= form_tag('/routines', method: "get") do %>
+  <%= label_tag(:season, "Season") %>
+  <%= select_tag(:season, options_for_select([ "Winter", "Summer"])) %>
+  <%=submit_tag("Search") %>
+
+
+<br></br>
+
+
+<%= @routines.each do |routine| %>
+  <h4><a href="/routines/<%= routine.id %>"></a></h4>
+  <p><%= @routine.title %></p>
+  <p>By <%= @routine.username %></p>
+  
+<br><br>
+
+<% end %>
+):
+1:    <h1>All Routines</h1>
+2:    
+3:    # Users can see all routines created. but can not edit unless its their own
+4:    # add name of user that routine belongs to
+5:    
+6:    
+7:    <%= form_tag('/routines', method: "get") do %>
+8:      <%= label_tag(:season, "Season") %>
+9:      <%= select_tag(:season, options_for_select([ "Winter", "Summer"])) %>
+10:      <%=submit_tag("Search") %>
+11:    
+12:    
+13:    <br></br>
+14:    
+15:    
+16:    <%= @routines.each do |routine| %>
+17:      <h4><a href="/routines/<%= routine.id %>"></a></h4>
+18:      <p><%= @routine.title %></p>
+19:      <p>By <%= @routine.username %></p>
+20:      
+21:    <br><br>
+22:    
+23:    <% end %>
+  
+app/views/routines/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+Started POST "/routines" for ::1 at 2020-12-07 14:11:30 -0500
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"mdvzG57hy425GbNRu8MyWWHZGlsaOxftJKawIkrq1c0zHA7C6xgxyWTD7REvKqIgQoLt7b/00dZAIUzxT9TUFQ==", "routine"=>{"title"=>"I'M In", "season"=>"Winter", "step"=>"Cleanse", "product_id"=>"2"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms | Allocations: 1555)
+
+
+  
+NoMethodError (undefined method `routines' for nil:NilClass):
+  
+app/controllers/routines_controller.rb:9:in `create'
+Started POST "/routines" for ::1 at 2020-12-07 14:14:29 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"mdvzG57hy425GbNRu8MyWWHZGlsaOxftJKawIkrq1c0zHA7C6xgxyWTD7REvKqIgQoLt7b/00dZAIUzxT9TUFQ==", "routine"=>{"title"=>"I'M In", "season"=>"Winter", "step"=>"Cleanse", "product_id"=>"2"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.3ms | Allocations: 3687)
+
+
+  
+NoMethodError (undefined method `routines' for nil:NilClass):
+  
+app/controllers/routines_controller.rb:9:in `create'
+Started GET "/routines" for ::1 at 2020-12-07 14:14:40 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.8ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:16
+  Rendered routines/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1422)
+Completed 200 OK in 30ms (Views: 24.5ms | ActiveRecord: 2.0ms | Allocations: 4963)
+
+
+Started GET "/routines" for ::1 at 2020-12-07 14:15:12 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (1.7ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:16
+  Rendered routines/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1047)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 1.7ms | Allocations: 3950)
+
+
+Started GET "/routines/new" for ::1 at 2020-12-07 14:21:18 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/new.html.erb:17
+  Rendered routines/new.html.erb within layouts/application (Duration: 32.3ms | Allocations: 10261)
+Completed 200 OK in 53ms (Views: 37.9ms | ActiveRecord: 4.3ms | Allocations: 17136)
+
+
+Started GET "/" for ::1 at 2020-12-07 14:22:09 -0500
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 1.2ms | Allocations: 188)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 4884)
+
+
+Started GET "/logout" for ::1 at 2020-12-07 14:22:14 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2020-12-07 14:22:32 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/new" for ::1 at 2020-12-07 14:23:11 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1251)
+Completed 200 OK in 44ms (Views: 18.3ms | ActiveRecord: 4.2ms | Allocations: 11382)
+
+
+Started GET "/logout" for ::1 at 2020-12-07 14:38:49 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/logout" for ::1 at 2020-12-07 14:39:50 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/new" for ::1 at 2020-12-07 14:39:54 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1193)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.0ms | Allocations: 4045)
+
+
+Started DELETE "/logout" for ::1 at 2020-12-07 14:39:57 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tSbMQ7fkQ4UfgDDH1CYCYWyiJfrmeJ48ZU98/sjBOt6FLRjGJsy5Hi20cIwjJj0aPRNZ64Mvan1s0WznndjfFQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/" for ::1 at 2020-12-07 14:39:57 -0500
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 1.2ms | Allocations: 188)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 2796)
+
+
+Started GET "/routines" for ::1 at 2020-12-07 14:40:18 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:16
+  Rendered routines/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1585)
+Completed 200 OK in 36ms (Views: 32.3ms | ActiveRecord: 1.1ms | Allocations: 4880)
+
+
+Started GET "/" for ::1 at 2020-12-07 14:40:26 -0500
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.3ms | Allocations: 64)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 2124)
+
+
+Started GET "/routines" for ::1 at 2020-12-07 14:42:20 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (1.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:16
+  Rendered routines/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1051)
+Completed 200 OK in 31ms (Views: 26.9ms | ActiveRecord: 1.4ms | Allocations: 4051)
+
+
+Started GET "/routines/new" for ::1 at 2020-12-07 14:42:36 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/new.html.erb:17
+  Rendered routines/new.html.erb within layouts/application (Duration: 32.9ms | Allocations: 9239)
+Completed 200 OK in 61ms (Views: 45.2ms | ActiveRecord: 2.9ms | Allocations: 16151)
+
+
+Started POST "/routines" for ::1 at 2020-12-07 14:42:46 -0500
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"IVh5n+ARpd6ikLpDBt9k0N0ZBjSjfxpQyaAFkYhXGpZFrlzIejdt5ptxdOeceFLiemRms97OydjMn5qF3lliBQ==", "routine"=>{"title"=>"Apple", "season"=>"Winter", "step"=>"Cleanse", "product_id"=>"2"}, "commit"=>"Submit"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.6ms | Allocations: 1782)
+
+
+  
+NoMethodError (undefined method `routines' for nil:NilClass):
+  
+app/controllers/routines_controller.rb:9:in `create'
+Started POST "/routines" for ::1 at 2020-12-07 14:47:00 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"IVh5n+ARpd6ikLpDBt9k0N0ZBjSjfxpQyaAFkYhXGpZFrlzIejdt5ptxdOeceFLiemRms97OydjMn5qF3lliBQ==", "routine"=>{"title"=>"Apple", "season"=>"Winter", "step"=>"Cleanse", "product_id"=>"2"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 500 Internal Server Error in 297843ms (ActiveRecord: 2.4ms | Allocations: 134178)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/routines_controller.rb:10:in `create'
+Started POST "/routines" for ::1 at 2020-12-07 14:52:19 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"IVh5n+ARpd6ikLpDBt9k0N0ZBjSjfxpQyaAFkYhXGpZFrlzIejdt5ptxdOeceFLiemRms97OydjMn5qF3lliBQ==", "routine"=>{"title"=>"Apple", "season"=>"Winter", "step"=>"Cleanse", "product_id"=>"2"}, "commit"=>"Submit"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 500 Internal Server Error in 497ms (ActiveRecord: 6.8ms | Allocations: 2744540)
+
+
+  
+NoMethodError (undefined method `routines' for nil:NilClass):
+  
+app/controllers/routines_controller.rb:9:in `create'
+Started DELETE "/logout" for ::1 at 2020-12-07 14:52:28 -0500
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"b0tSQj2xdVvFMn6fscTv6h5Af8NUTgJOSghW+i5gA9ZC4xveo76dMxl6FBzdcrNs9MPDaVokMZoFeXYu56LwPg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 45ms (ActiveRecord: 0.0ms | Allocations: 314803)
+
+
+Started GET "/" for ::1 at 2020-12-07 14:52:29 -0500
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 33.6ms | Allocations: 235643)
+Completed 200 OK in 323ms (Views: 295.7ms | ActiveRecord: 0.0ms | Allocations: 1810688)
+
+
+Started GET "/login" for ::1 at 2020-12-07 14:52:34 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (Duration: 10.6ms | Allocations: 47863)
+Completed 500 Internal Server Error in 215ms (ActiveRecord: 14.1ms | Allocations: 1105541)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Log In Here</h1>
+
+<%= form_for(@user), url: '/login' do |f|  %>
+
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.submit "Log In" %>
+    
+
+<% end %> 
+
+):
+1:    <h1>Log In Here</h1>
+2:    
+3:    <%= form_for(@user), url: '/login' do |f|  %>
+4:    
+5:        <%= f.label :username %>
+6:        <%= f.text_field :username %>
+7:    
+8:        <%= f.label :password %>
+9:        <%= f.password_field :password %>
+10:    
+11:        <%= f.submit "Log In" %>
+12:        
+13:    
+14:    <% end %> 
+  
+app/views/sessions/login.html.erb:3: syntax error, unexpected tLABEL
+app/views/sessions/login.html.erb:3: syntax error, unexpected do, expecting end
+app/views/sessions/login.html.erb:16: syntax error, unexpected end, expecting end-of-input
+app/views/sessions/login.html.erb:3: syntax error, unexpected tLABEL
+app/views/sessions/login.html.erb:3: syntax error, unexpected do, expecting end
+app/views/sessions/login.html.erb:16: syntax error, unexpected end, expecting end-of-input
+app/views/sessions/login.html.erb:3: syntax error, unexpected tLABEL
+app/views/sessions/login.html.erb:3: syntax error, unexpected do, expecting end
+app/views/sessions/login.html.erb:16: syntax error, unexpected end, expecting end-of-input
+app/views/sessions/login.html.erb:3: syntax error, unexpected tLABEL
+app/views/sessions/login.html.erb:3: syntax error, unexpected do, expecting end
+app/views/sessions/login.html.erb:16: syntax error, unexpected end, expecting end-of-input
+app/views/sessions/login.html.erb:3: syntax error, unexpected tLABEL
+app/views/sessions/login.html.erb:3: syntax error, unexpected do, expecting end
+app/views/sessions/login.html.erb:16: syntax error, unexpected end, expecting end-of-input
+app/views/sessions/login.html.erb:3: syntax error, unexpected tLABEL
+app/views/sessions/login.html.erb:3: syntax error, unexpected do, expecting end
+app/views/sessions/login.html.erb:16: syntax error, unexpected end, expecting end-of-input
+app/controllers/sessions_controller.rb:5:in `new'
+Started GET "/login" for ::1 at 2020-12-07 14:54:04 -0500
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1527)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 2.4ms | Allocations: 9465)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Log In Here</h1>
+
+<%= form_for(@user), url: '/login' do |f|  %>
+
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.submit "Log In" %>
+    
+
+<% end %> 
+
+):
+1:    <h1>Log In Here</h1>
+2:    
+3:    <%= form_for(@user), url: '/login' do |f|  %>
+4:    
+5:        <%= f.label :username %>
+6:        <%= f.text_field :username %>
+7:    
+8:        <%= f.label :password %>
+9:        <%= f.password_field :password %>
+10:    
+11:        <%= f.submit "Log In" %>
+12:        
+13:    
+14:    <% end %> 
+  
+app/views/sessions/login.html.erb:3: syntax error, unexpected tLABEL
+app/views/sessions/login.html.erb:3: syntax error, unexpected do, expecting end
+app/views/sessions/login.html.erb:16: syntax error, unexpected end, expecting end-of-input
+app/views/sessions/login.html.erb:3: syntax error, unexpected tLABEL
+app/views/sessions/login.html.erb:3: syntax error, unexpected do, expecting end
+app/views/sessions/login.html.erb:16: syntax error, unexpected end, expecting end-of-input
+app/views/sessions/login.html.erb:3: syntax error, unexpected tLABEL
+app/views/sessions/login.html.erb:3: syntax error, unexpected do, expecting end
+app/views/sessions/login.html.erb:16: syntax error, unexpected end, expecting end-of-input
+app/views/sessions/login.html.erb:3: syntax error, unexpected tLABEL
+app/views/sessions/login.html.erb:3: syntax error, unexpected do, expecting end
+app/views/sessions/login.html.erb:16: syntax error, unexpected end, expecting end-of-input
+app/views/sessions/login.html.erb:3: syntax error, unexpected tLABEL
+app/views/sessions/login.html.erb:3: syntax error, unexpected do, expecting end
+app/views/sessions/login.html.erb:16: syntax error, unexpected end, expecting end-of-input
+app/views/sessions/login.html.erb:3: syntax error, unexpected tLABEL
+app/views/sessions/login.html.erb:3: syntax error, unexpected do, expecting end
+app/views/sessions/login.html.erb:16: syntax error, unexpected end, expecting end-of-input
+app/controllers/sessions_controller.rb:5:in `new'
+Started GET "/" for ::1 at 2020-12-07 14:55:47 -0500
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 1.4ms | Allocations: 215)
+Completed 200 OK in 154ms (Views: 152.2ms | ActiveRecord: 0.0ms | Allocations: 11065)
+
+
+Started GET "/login" for ::1 at 2020-12-07 14:55:48 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (Duration: 17.8ms | Allocations: 2593)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.0ms | Allocations: 4678)
+
+
+Started POST "/login" for ::1 at 2020-12-07 14:56:07 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"IxxEDqNfmvIBVYBV18DIdDZubIXaApAhalh9pBii+bQpTgx59VnyFjCDI1Xdjh0dlWKszhDT5AXIkQunFVc+Ww==", "user"=>{"username"=>"Jam", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Jam"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000login
+Completed 302 Found in 19ms (ActiveRecord: 0.8ms | Allocations: 1356)
+
+
+Started POST "/login" for ::1 at 2020-12-07 14:57:06 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"IxxEDqNfmvIBVYBV18DIdDZubIXaApAhalh9pBii+bQpTgx59VnyFjCDI1Xdjh0dlWKszhDT5AXIkQunFVc+Ww==", "user"=>{"username"=>"Jam", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Jam"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 18ms (ActiveRecord: 1.3ms | Allocations: 3041)
+
+
+Started GET "/login" for ::1 at 2020-12-07 14:57:06 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (Duration: 2.5ms | Allocations: 759)
+Completed 200 OK in 21ms (Views: 12.1ms | ActiveRecord: 0.8ms | Allocations: 6517)
+
+
+Started POST "/login" for ::1 at 2020-12-07 14:57:17 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"CVEcYRYqbSsgDKzRXUMPGmRKfIHFt9ZRs5f37Olgxx4DA1QWQCwFzxHaD9FXDdpzx0a8yg9monURXoHv5JUA8Q==", "user"=>{"username"=>"Pear", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Pear"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 10ms (ActiveRecord: 0.9ms | Allocations: 845)
+
+
+Started GET "/login" for ::1 at 2020-12-07 14:57:17 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (Duration: 2.0ms | Allocations: 697)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms | Allocations: 2613)
+
+
+Started DELETE "/logout" for ::1 at 2020-12-07 14:57:27 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CQAG/WNRNZWkR/yiH7oLH6lmVIKOu3tzqYkPuelXiSdvINY/1Aj9XHaoz/ooYLKOxNTYTaDKi69vfWRhIvpa4w=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 303)
+
+
+Started GET "/" for ::1 at 2020-12-07 14:57:27 -0500
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.3ms | Allocations: 61)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms | Allocations: 2117)
+
+
+Started GET "/signup" for ::1 at 2020-12-07 14:57:29 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1303)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.0ms | Allocations: 3815)
+
+
+Started POST "/users" for ::1 at 2020-12-07 14:57:48 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"3lgTK3ceambOJZoiW0Zs5WBpaTvk1rx8I+8ErX15kBz6F5Eq3nuVO6wczk0qu7r1TMuE96xbxCbpbuKCxEvIGQ==", "user"=>{"username"=>"cat", "email"=>"c@cmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "c@cmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Create (8.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "cat"], ["email", "c@cmail.com"], ["password_digest", "$2a$12$cLa/4yUAgk8BfGAvMdaQ4OI6k50VQvtPajlKY.L9y7g2cWv4eOmb6"], ["created_at", "2020-12-07 19:57:48.962727"], ["updated_at", "2020-12-07 19:57:48.962727"]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 362ms (ActiveRecord: 11.4ms | Allocations: 10093)
+
+
+Started GET "/routines" for ::1 at 2020-12-07 14:57:49 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:16
+  Rendered routines/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1449)
+Completed 200 OK in 28ms (Views: 21.6ms | ActiveRecord: 1.3ms | Allocations: 5053)
+
+
+Started DELETE "/logout" for ::1 at 2020-12-07 14:57:53 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"e8IvlHyNwoDlPdiUw/NKTfVKnkYFhsyrkMxD+DSjPym6hvCxx+B/wRhJSM1EBIwEkUZklYToMNO3f9sJBD6T7Q=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started GET "/" for ::1 at 2020-12-07 14:57:53 -0500
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.3ms | Allocations: 64)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 2133)
+
+
+Started GET "/login" for ::1 at 2020-12-07 14:57:54 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (Duration: 2.1ms | Allocations: 697)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 2617)
+
+
+Started POST "/login" for ::1 at 2020-12-07 14:58:02 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"hx2PLa+kHAJybA5BBBknnl1NuRRoEFjlWP6Qn250svyoPemobuF5tCL+ERfU1irqwLtYn9GhNF18Gf7y+/YsPg==", "user"=>{"username"=>"cat", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "cat"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 680ms (ActiveRecord: 0.5ms | Allocations: 38854)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sessions_controller.rb:13:in `create'
+Started POST "/login" for ::1 at 2020-12-07 14:58:22 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"hx2PLa+kHAJybA5BBBknnl1NuRRoEFjlWP6Qn250svyoPemobuF5tCL+ERfU1irqwLtYn9GhNF18Gf7y+/YsPg==", "user"=>{"username"=>"cat", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "cat"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 36575ms (ActiveRecord: 2.1ms | Allocations: 248241)
+
+
+Started GET "/routines" for ::1 at 2020-12-07 14:58:59 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:16
+  Rendered routines/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 753)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.4ms | Allocations: 2832)
+
+
+Started GET "/routines/new" for ::1 at 2020-12-07 15:00:05 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/new.html.erb:17
+  Rendered routines/new.html.erb within layouts/application (Duration: 28.3ms | Allocations: 7802)
+Completed 200 OK in 61ms (Views: 39.0ms | ActiveRecord: 4.5ms | Allocations: 16349)
+
+
+Started POST "/routines" for ::1 at 2020-12-07 15:00:23 -0500
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"k23YtjN8zy9WtohJHzV8ZUGZkm0UAgpsdUD14cd7kGiYXh6y4iAksqxcEeTTYKVFsnnw+s7qvjcbzBiu7S8MIw==", "routine"=>{"title"=>"Ok", "season"=>"Winter", "step"=>"Protect", "product_id"=>"1"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/routines_controller.rb:11:in `create'
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:11:in `create'
+  [1m[36mRoutine Create (1.9ms)[0m  [1m[32mINSERT INTO "routines" ("title", "season", "step", "created_at", "updated_at", "product_id", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Ok"], ["season", "Winter"], ["step", "Protect"], ["created_at", "2020-12-07 20:00:23.747548"], ["updated_at", "2020-12-07 20:00:23.747548"], ["product_id", 1], ["user_id", 1]]
+  ↳ app/controllers/routines_controller.rb:11:in `create'
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/routines_controller.rb:11:in `create'
+Redirected to http://localhost:3000/routines/1
+Completed 302 Found in 131ms (ActiveRecord: 12.9ms | Allocations: 20313)
+
+
+Started GET "/routines/1" for ::1 at 2020-12-07 15:00:23 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1060)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms | Allocations: 2140)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1> Show Me</h1>
+
+<%= @routine.title %> is for <% @routine.season%> season and 
+<br></br>
+
+<%= link_to "Edit Routine", edit_routine_path(@routine) %>
+<%= button_to "Delete Routine", routine_path(@routine), method: :delete %>
+
+<% end %>
+
+
+):
+1:    <h1> Show Me</h1>
+2:    
+3:    <%= @routine.title %> is for <% @routine.season%> season and 
+4:    <br></br>
+5:    
+6:    <%= link_to "Edit Routine", edit_routine_path(@routine) %>
+7:    <%= button_to "Delete Routine", routine_path(@routine), method: :delete %>
+8:    
+9:    <% end %>
+10:    
+  
+app/views/routines/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/routines/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/routines/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/routines/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/routines/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/routines/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+Started GET "/routines/1" for ::1 at 2020-12-07 15:01:55 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1063)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms | Allocations: 2614)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1> Show Me</h1>
+
+<%= @routine.title %> is for <% @routine.season %> season and 
+<br></br>
+
+<%= link_to "Edit Routine", edit_routine_path(@routine) %>
+<%= button_to "Delete Routine", routine_path(@routine), method: :delete %>
+
+<% end %>
+
+
+):
+1:    <h1> Show Me</h1>
+2:    
+3:    <%= @routine.title %> is for <% @routine.season %> season and 
+4:    <br></br>
+5:    
+6:    <%= link_to "Edit Routine", edit_routine_path(@routine) %>
+7:    <%= button_to "Delete Routine", routine_path(@routine), method: :delete %>
+8:    
+9:    <% end %>
+10:    
+  
+app/views/routines/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/routines/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/routines/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/routines/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/routines/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+app/views/routines/show.html.erb:13: syntax error, unexpected end, expecting end-of-input
+Started GET "/routines/1" for ::1 at 2020-12-07 15:02:59 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 503)
+Completed 200 OK in 25ms (Views: 18.7ms | ActiveRecord: 0.4ms | Allocations: 3886)
+
+
+Started GET "/routines/1" for ::1 at 2020-12-07 17:24:55 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 952)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.3ms | Allocations: 8250)
+
+
+Started GET "/routines/1" for ::1 at 2020-12-07 17:25:43 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 576)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.3ms | Allocations: 3954)
+
+
+Started GET "/routines/1" for ::1 at 2020-12-07 17:27:50 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1417)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms | Allocations: 2955)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <h1> Show Me</h1>
+    2: 
+    3: <% @user.username %>
+    4: 
+    5: <%= @routine.title %> is for <%= @routine.season %> season and 
+    6: <br></br>
+  
+app/views/routines/show.html.erb:3
+Started GET "/routines/1" for ::1 at 2020-12-07 17:29:18 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 604)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.3ms | Allocations: 3987)
+
+
+Started GET "/routines/1" for ::1 at 2020-12-07 17:32:31 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1071)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms | Allocations: 2610)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1> Show Me</h1>
+
+
+<%= @user :username %>
+
+
+<%= @routine.title %> is for <%= @routine.season %> season and 
+<br></br>
+
+<%= button_to "Edit Routine", edit_routine_path(@routine) %>
+<%= button_to "Delete Routine", routine_path(@routine), method: :delete %>
+
+
+
+):
+1:    <h1> Show Me</h1>
+2:    
+3:    
+4:    <%= @user :username %>
+5:    
+6:    
+7:    <%= @routine.title %> is for <%= @routine.season %> season and 
+8:    <br></br>
+9:    
+10:    <%= button_to "Edit Routine", edit_routine_path(@routine) %>
+11:    <%= button_to "Delete Routine", routine_path(@routine), method: :delete %>
+12:    
+13:    
+  
+app/views/routines/show.html.erb:4: syntax error, unexpected ':', expecting ')'
+app/views/routines/show.html.erb:4: syntax error, unexpected ':', expecting ')'
+app/views/routines/show.html.erb:4: syntax error, unexpected ':', expecting ')'
+app/views/routines/show.html.erb:4: syntax error, unexpected ':', expecting ')'
+app/views/routines/show.html.erb:4: syntax error, unexpected ':', expecting ')'
+app/views/routines/show.html.erb:4: syntax error, unexpected ':', expecting ')'
+Started GET "/routines/1" for ::1 at 2020-12-07 17:33:57 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1071)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms | Allocations: 2614)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1> Show Me</h1>
+
+
+<%= @user (:username) %>
+
+
+<%= @routine.title %> is for <%= @routine.season %> season and 
+<br></br>
+
+<%= button_to "Edit Routine", edit_routine_path(@routine) %>
+<%= button_to "Delete Routine", routine_path(@routine), method: :delete %>
+
+
+
+):
+1:    <h1> Show Me</h1>
+2:    
+3:    
+4:    <%= @user (:username) %>
+5:    
+6:    
+7:    <%= @routine.title %> is for <%= @routine.season %> season and 
+8:    <br></br>
+9:    
+10:    <%= button_to "Edit Routine", edit_routine_path(@routine) %>
+11:    <%= button_to "Delete Routine", routine_path(@routine), method: :delete %>
+12:    
+13:    
+  
+app/views/routines/show.html.erb:4: syntax error, unexpected '(', expecting ')'
+app/views/routines/show.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/routines/show.html.erb:4: syntax error, unexpected '(', expecting ')'
+app/views/routines/show.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/routines/show.html.erb:4: syntax error, unexpected '(', expecting ')'
+app/views/routines/show.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/routines/show.html.erb:4: syntax error, unexpected '(', expecting ')'
+app/views/routines/show.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/routines/show.html.erb:4: syntax error, unexpected '(', expecting ')'
+app/views/routines/show.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/routines/show.html.erb:4: syntax error, unexpected '(', expecting ')'
+app/views/routines/show.html.erb:4: syntax error, unexpected ')', expecting end
+Started GET "/routines/1" for ::1 at 2020-12-07 17:34:37 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1415)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms | Allocations: 2957)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: <h1> Show Me</h1>
+    2: 
+    3: 
+    4: <%= @user [:username] %>
+    5: 
+    6: 
+    7: <%= @routine.title %> is for <%= @routine.season %> season and 
+  
+app/views/routines/show.html.erb:4
+Started GET "/routines/1" for ::1 at 2020-12-07 17:35:05 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1413)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms | Allocations: 2955)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: <h1> Show Me</h1>
+    2: 
+    3: 
+    4: <%= @user[:username] %>
+    5: 
+    6: 
+    7: <%= @routine.title %> is for <%= @routine.season %> season and 
+  
+app/views/routines/show.html.erb:4
+Started GET "/routines/1" for ::1 at 2020-12-07 17:37:18 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1454)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 2996)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: <h1> Show Me</h1>
+    2: 
+    3: 
+    4: # <%= @user[:username] %>
+    5: 
+    6: 
+    7: <%= @routine.title %> 
+  
+app/views/routines/show.html.erb:4
+Started GET "/routines/1" for ::1 at 2020-12-07 17:37:50 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1875)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms | Allocations: 3417)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    16: <%= button_to "Delete Routine", routine_path(@routine), method: :delete %>
+    17: 
+    18: 
+    19: # <%= @user[:username] %>
+    20: 
+  
+app/views/routines/show.html.erb:19
+Started GET "/routines/1" for ::1 at 2020-12-07 17:38:49 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:51:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  Rendered routines/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 623)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.4ms | Allocations: 4006)
+
+
