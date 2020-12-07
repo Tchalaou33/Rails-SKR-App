@@ -10,4 +10,3 @@ class Routine < ApplicationRecord
 end
 
 
-\

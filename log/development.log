@@ -4562,3 +4562,35 @@ Migrating to AddColumnToRoutines (20201207142342)
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/routines/new" for ::1 at 2020-12-07 10:12:19 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RoutinesController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 920)
+
+
+  
+SyntaxError (/mnt/c/Users/DreaTu/skincare-routine/app/models/routine.rb:13: syntax error, unexpected backslash, expecting end-of-input):
+  
+app/models/routine.rb:13: syntax error, unexpected backslash, expecting end-of-input
+app/models/routine.rb:13: syntax error, unexpected backslash, expecting end-of-input
+app/models/routine.rb:13: syntax error, unexpected backslash, expecting end-of-input
+app/controllers/routines_controller.rb:4:in `new'
+Started GET "/routines/new" for ::1 at 2020-12-07 10:12:36 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1397)
+Completed 200 OK in 91ms (Views: 74.5ms | ActiveRecord: 0.9ms | Allocations: 23549)
+
+
+Started POST "/routines" for ::1 at 2020-12-07 10:14:16 -0500
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"a5froKVNo9sZS09TuiqGQJmdmwATLfzv9bwJIza38RXBUBZ50LRZn8SRERMuwxY5usZstrbiOtSRO/XwM4nwzQ==", "routine"=>{"title"=>"Here We Go!", "season"=>"Winter", "step"=>"Treat"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 0.0ms | Allocations: 76880)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<RoutinesController:0x00007fffde3a9720>):
+  
+app/controllers/routines_controller.rb:9:in `create'
