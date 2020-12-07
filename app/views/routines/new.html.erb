@@ -1,10 +1,19 @@
 <h1> Create A Routine!</h1>
 
 <%= form_for(@routine) do |f| %>
-    Tilte:
+    
     <%= f.label :title %>
     <%= f.text_field :title %>
 
-    
+    <%= f.label :season %>
+    <%= f.select(:season, options_for_select([ "Winter", "Summer"])) %>
+
+    <%= f.label :step %>
+    <%= f.select(:step, ["Cleanse", "Treat", "Hydrate", "Protect"]) %>
+
+    <%= f.label :product %>
+    <%= f.text_field :title %>
+
+    <%= f.submit "Create" %>
 
     <% end %>

@@ -623,3 +623,174 @@ Migrating to CreateRoutines (20201206194521)
   [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/routines/new" for ::1 at 2020-12-07 03:53:09 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1986)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 5764)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2)):
+     7: 
+     8:     Season:
+     9:     <%= f.label :season %>
+    10:     <%= f.select(:season, options_for_select{[ "Winter", "Summer"]}) %>
+    11: 
+    12:     Step:
+    13:     <%= f.text_field :step %>
+  
+app/views/routines/new.html.erb:10
+app/views/routines/new.html.erb:3
+Started GET "/routines/new" for ::1 at 2020-12-07 03:56:23 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 30.5ms | Allocations: 5078)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms | Allocations: 6125)
+
+
+  
+ActionView::Template::Error (undefined method `season' for #<Routine id: nil, title: nil, created_at: nil, updated_at: nil>):
+     7: 
+     8:     Season:
+     9:     <%= f.label :season %>
+    10:     <%= f.select(:season, options_for_select([ "Winter", "Summer"])) %>
+    11: 
+    12:     Step:
+    13:     <%= f.text_field :step %>
+  
+app/views/routines/new.html.erb:10
+app/views/routines/new.html.erb:3
+Started GET "/routines/new" for ::1 at 2020-12-07 04:00:31 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 3040)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 4056)
+
+
+  
+ActionView::Template::Error (undefined method `seasons' for #<Routine id: nil, title: nil, created_at: nil, updated_at: nil>):
+     7: 
+     8:     Season:
+     9:     <%= f.label :seasons %>
+    10:     <%= f.select(:seasons, options_for_select([ "Winter", "Summer"])) %>
+    11: 
+    12:     Step:
+    13:     <%= f.text_field :step %>
+  
+app/views/routines/new.html.erb:10
+app/views/routines/new.html.erb:3
+Started GET "/routines/new" for ::1 at 2020-12-07 04:02:52 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3048)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 4063)
+
+
+  
+ActionView::Template::Error (undefined method `season' for #<Routine id: nil, title: nil, created_at: nil, updated_at: nil>):
+     7: 
+     8:     Season:
+     9:     <%= f.label :season %>
+    10:     <%= f.text_field :season %>
+    11: 
+    12:     # <%= f.select(:seasons, options_for_select([ "Winter", "Summer"])) %>
+    13: 
+  
+app/views/routines/new.html.erb:10
+app/views/routines/new.html.erb:3
+Started GET "/routines/new" for ::1 at 2020-12-07 04:03:18 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2942)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 3950)
+
+
+  
+ActionView::Template::Error (undefined method `season' for #<Routine id: nil, title: nil, created_at: nil, updated_at: nil>):
+     7: 
+     8:     Season:
+     9:     <%= f.label :season %>
+    10:     <%= f.text_field :season %>
+    11: 
+    12: 
+    13:     Step:
+  
+app/views/routines/new.html.erb:10
+app/views/routines/new.html.erb:3
+Started GET "/routines/new" for ::1 at 2020-12-07 04:09:01 -0500
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 38.4ms | Allocations: 3006)
+Completed 200 OK in 142ms (Views: 102.0ms | ActiveRecord: 2.7ms | Allocations: 15337)
+
+
+Started GET "/routines/new" for ::1 at 2020-12-07 04:09:50 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 22.4ms | Allocations: 5578)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms | Allocations: 6601)
+
+
+  
+ActionView::Template::Error (undefined method `seasons' for #<Routine:0x00007ffff8cb8400>
+Did you mean?  season
+               season?
+               season=):
+     7: 
+     8:     Season:
+     9:     <%= f.label :season %>
+    10:     <%= f.select(:seasons, options_for_select([ "Winter", "Summer"])) %>
+    11: 
+    12:     Step:
+    13:     <%= f.text_field :step %>
+  
+app/views/routines/new.html.erb:10
+app/views/routines/new.html.erb:3
+Started GET "/routines/new" for ::1 at 2020-12-07 04:10:13 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1299)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.0ms | Allocations: 3985)
+
+
+Started GET "/routines/new" for ::1 at 2020-12-07 04:16:57 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1487)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 4112)
+
+
+Started GET "/routines/new" for ::1 at 2020-12-07 04:17:11 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1359)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 3984)
+
+
+Started GET "/routines/new" for ::1 at 2020-12-07 04:17:35 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1372)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 3988)
+
+
+Started GET "/routines/new" for ::1 at 2020-12-07 04:19:09 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1360)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms | Allocations: 3976)
+
+
+Started GET "/routines/new" for ::1 at 2020-12-07 04:19:36 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1634)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 4251)
+
+
