@@ -1,7 +1,14 @@
 class RoutinesController < ApplicationController
 
     def new
-        @routine = Routine.new
+        # check id it's nested & it's a proper id
+        if params[:prouduct_id] && product = Product.find_by_id(params[:product_id])
+            # nested route
+           @routine = product.routines.build
+        else
+            # unnested
+            @routine = Routine.new
+        end  
     end
 
 
