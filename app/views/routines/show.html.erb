@@ -1,6 +1,6 @@
 <h1> Show Me</h1>
 
-<%= @routine.user.try(:username) %>
+# <%= @routine.user.try(:username) 
 
 <%= @routine.title %> 
 <br></br>
@@ -13,10 +13,7 @@
 <%= @routine.step %>
 <br></br>
 
-<%= button_to "Edit Routine", edit_routine_path(@routine) %> 
-
-OR 
-
+<%= button_to "Edit Routine", edit_routine_path(@routine) %>  
 <%= button_to "Delete Routine", routine_path(@routine), method: :delete %>
 
 

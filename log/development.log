@@ -7213,3 +7213,1160 @@ Processing by RoutinesController#new as HTML
 Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.5ms | Allocations: 3825)
 
 
+Started DELETE "/logout" for ::1 at 2020-12-07 19:13:28 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3ojYaZ8hek5gzbboi+GAftE9C5/WLMm2OleFlm7vdZg9FspJTjSsFqbGCNbKFPmYKJeIj4DvA6QMJyqPRuKScg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 319)
+
+
+Started GET "/" for ::1 at 2020-12-07 19:13:29 -0500
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 1.0ms | Allocations: 188)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 2790)
+
+
+Started GET "/login" for ::1 at 2020-12-07 19:13:30 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (Duration: 2.6ms | Allocations: 991)
+Completed 200 OK in 33ms (Views: 12.3ms | ActiveRecord: 1.4ms | Allocations: 8624)
+
+
+Started POST "/login" for ::1 at 2020-12-07 19:13:36 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"rr7wNFO4F2MYsXPDNsLqGIAxSVdXc3mhVS61ccq3puMPJ+csX5gumTCXVDB7aM8zVHyxWJmHm+HLicAsYLfkKQ==", "user"=>{"username"=>"cat", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "cat"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 316ms (ActiveRecord: 0.6ms | Allocations: 1065)
+
+
+Started GET "/routines" for ::1 at 2020-12-07 19:13:37 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.6ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:16
+  Rendered routines/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 7147)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.6ms | Allocations: 8340)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    15: 
+    16: <%= @routines.each do |routine| %>
+    17:   <h4><a href="/routines/<%= routine.id %>"></a></h4>
+    18:   <p><%= @routine.title %></p>
+    19:  
+    20: 
+    21: <br><br>
+  
+app/views/routines/index.html.erb:18
+app/views/routines/index.html.erb:16
+Started GET "/routines" for ::1 at 2020-12-07 19:17:01 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (1.0ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:16
+  Rendered routines/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2309)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.0ms | Allocations: 3316)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    15: 
+    16: <%= @routines.each do |routine| %>
+    17:   <h4><a href="/routines/<%= routine.id %>"></a></h4>
+    18:   <p><%= @routine.title %></p>
+    19:  
+    20: 
+    21: <br><br>
+  
+app/views/routines/index.html.erb:18
+app/views/routines/index.html.erb:16
+Started GET "/login" for ::1 at 2020-12-07 19:17:05 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (Duration: 3.1ms | Allocations: 934)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 3607)
+
+
+Started POST "/login" for ::1 at 2020-12-07 19:17:10 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"bVsNaJyQT8vVQ3Lm83OY+SfqFYJkd4VzAST6xo54OrDMwhpwkLB2Mf1lVRW+2b3S86ftjaqDZzOfg4+bJHh4eg==", "user"=>{"username"=>"cat", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "cat"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 315ms (ActiveRecord: 0.5ms | Allocations: 912)
+
+
+Started GET "/routines" for ::1 at 2020-12-07 19:17:10 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:16
+  Rendered routines/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2025)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms | Allocations: 2293)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    15: 
+    16: <%= @routines.each do |routine| %>
+    17:   <h4><a href="/routines/<%= routine.id %>"></a></h4>
+    18:   <p><%= @routine.title %></p>
+    19:  
+    20: 
+    21: <br><br>
+  
+app/views/routines/index.html.erb:18
+app/views/routines/index.html.erb:16
+Started GET "/routines" for ::1 at 2020-12-07 19:18:07 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:16
+  Rendered routines/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2307)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms | Allocations: 3314)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    15: 
+    16: <%= @routines.each do |routine| %>
+    17:   <h4><a href="/routines/<%= routine.id %>"></a></h4>
+    18:   <p><%= @routine.title %></p>
+    19:  
+    20: 
+    21: <br><br>
+  
+app/views/routines/index.html.erb:18
+app/views/routines/index.html.erb:16
+Started GET "/login" for ::1 at 2020-12-07 19:52:04 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1591)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms | Allocations: 11330)
+
+
+Started DELETE "/logout" for ::1 at 2020-12-07 19:52:06 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DGVslIfj5ASPl7yKORiil/297oeumEIpcjNG+iMfQKX8Z8u2th3Ic7jpqhdTnMPx3CAg6oDGLBE+z9cMWho0zQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 304)
+
+
+Started GET "/" for ::1 at 2020-12-07 19:52:06 -0500
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.9ms | Allocations: 187)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 4073)
+
+
+Started GET "/signup" for ::1 at 2020-12-07 19:52:08 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1831)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 6822)
+
+
+Started POST "/users" for ::1 at 2020-12-07 19:52:38 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"GT8G41VTdM4Tcy+dxRltCMWwFeeB/qbjMK5YAOig4DmGTXJbnQr0EYYD/b+wynSvHDZu40kLd9WxMdTvVXUoAA==", "user"=>{"username"=>"Oat", "email"=>"p@pmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "p@pmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Create (7.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Oat"], ["email", "p@pmail.com"], ["password_digest", "$2a$12$ICQ0LuO71tQ8./eB.3xx6eTINtL7m.3aUYeq5dj/W.jDzoMVfjSuG"], ["created_at", "2020-12-08 00:52:38.577487"], ["updated_at", "2020-12-08 00:52:38.577487"]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 335ms (ActiveRecord: 10.9ms | Allocations: 5159)
+
+
+Started GET "/routines" for ::1 at 2020-12-07 19:52:38 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.6ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:16
+  Rendered routines/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 3175)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.6ms | Allocations: 6706)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    15: 
+    16: <%= @routines.each do |routine| %>
+    17:   <h4><a href="/routines/<%= routine.id %>"></a></h4>
+    18:   <p><%= @routine.title %></p>
+    19:  
+    20: 
+    21: <br><br>
+  
+app/views/routines/index.html.erb:18
+app/views/routines/index.html.erb:16
+Started GET "/routines" for ::1 at 2020-12-07 19:53:28 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.6ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:16
+  Rendered routines/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2310)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms | Allocations: 3317)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    15: 
+    16: # <%= @routines.each do |routine| %>
+    17: #   <h4><a href="/routines/<%= routine.id %>"></a></h4>
+    18: #   <p><%= @routine.title %></p>
+    19:  
+    20: 
+    21: <br><br>
+  
+app/views/routines/index.html.erb:18
+app/views/routines/index.html.erb:16
+Started GET "/routines" for ::1 at 2020-12-07 19:53:48 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  Rendered routines/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1083)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2091)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>All Routines</h1>
+
+# Users can see all routines created. but can not edit unless its their own
+# add name of user that routine belongs to
+
+
+<%= form_tag('/routines', method: "get") do %>
+  <%= label_tag(:season, "Season") %>
+  <%= select_tag(:season, options_for_select([ "Winter", "Summer"])) %>
+  <%=submit_tag("Search") %>
+
+
+<br></br>
+
+ 
+
+<br><br>
+
+
+):
+1:    <h1>All Routines</h1>
+2:    
+3:    # Users can see all routines created. but can not edit unless its their own
+4:    # add name of user that routine belongs to
+5:    
+6:    
+7:    <%= form_tag('/routines', method: "get") do %>
+8:      <%= label_tag(:season, "Season") %>
+9:      <%= select_tag(:season, options_for_select([ "Winter", "Summer"])) %>
+10:      <%=submit_tag("Search") %>
+11:    
+12:    
+13:    <br></br>
+14:    
+15:     
+16:    
+17:    <br><br>
+18:    
+  
+app/views/routines/index.html.erb:21: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:21: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:21: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:21: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:21: syntax error, unexpected end-of-input, expecting end
+app/views/routines/index.html.erb:21: syntax error, unexpected end-of-input, expecting end
+Started GET "/routines" for ::1 at 2020-12-08 02:31:15 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  Rendered routines/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 625)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 6524)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:33:14 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  Rendered routines/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1612)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2614)
+
+
+  
+ActionView::Template::Error (undefined method `all' for nil:NilClass):
+     8:   <%= label_tag(:season, "Season") %>
+     9:   <%= select_tag(:season, options_for_select([ "Winter", "Summer"])) %>
+    10:   <%= submit_tag("Search") %>
+    11:   <%= @routine.all.title %> 
+    12: 
+    13: 
+    14: 
+  
+app/views/routines/index.html.erb:11
+app/views/routines/index.html.erb:7
+Started GET "/routines" for ::1 at 2020-12-08 02:33:29 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  Rendered routines/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1621)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2628)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+     8:   <%= label_tag(:season, "Season") %>
+     9:   <%= select_tag(:season, options_for_select([ "Winter", "Summer"])) %>
+    10:   <%= submit_tag("Search") %>
+    11:   <%= @routine.title %> 
+    12: 
+    13: 
+    14: 
+  
+app/views/routines/index.html.erb:11
+app/views/routines/index.html.erb:7
+Started GET "/routines" for ::1 at 2020-12-08 02:33:32 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  Rendered routines/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1396)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1664)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+     8:   <%= label_tag(:season, "Season") %>
+     9:   <%= select_tag(:season, options_for_select([ "Winter", "Summer"])) %>
+    10:   <%= submit_tag("Search") %>
+    11:   <%= @routine.title %> 
+    12: 
+    13: 
+    14: 
+  
+app/views/routines/index.html.erb:11
+app/views/routines/index.html.erb:7
+Started GET "/routines" for ::1 at 2020-12-08 02:33:42 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  Rendered routines/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 357)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 3369)
+
+
+Started GET "/signup" for ::1 at 2020-12-08 02:34:04 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1202)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 6468)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms | Allocations: 1912)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:08 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:09 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:14 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:14 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:14 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:14 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:14 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:14 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:14 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:14 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:14 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:14 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:14 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:14 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:15 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:15 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:15 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:15 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:15 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:15 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:15 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 807)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:15 -0500
+Processing by RoutinesController#index as HTML
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:59:in `set_routine'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 808)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:44:19 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  Rendered routines/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 361)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 4141)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 02:53:38 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  Rendered routines/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 361)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 4160)
+
+
+Started GET "/products/2/routine" for ::1 at 2020-12-08 02:56:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/products/2/routine"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/products/2/routine" for ::1 at 2020-12-08 02:56:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/products/2/routine"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/products/2/routines" for ::1 at 2020-12-08 02:56:54 -0500
+Processing by RoutinesController#index as HTML
+  Parameters: {"product_id"=>"2"}
+  Rendering routines/index.html.erb within layouts/application
+  Rendered routines/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 157)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 2250)
+
+
+Started GET "/" for ::1 at 2020-12-08 03:12:10 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.5ms | Allocations: 188)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 4043)
+
+
+Started GET "/signup" for ::1 at 2020-12-08 03:12:13 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1323)
+Completed 200 OK in 17ms (Views: 7.1ms | ActiveRecord: 0.9ms | Allocations: 9526)
+
+
+Started GET "/signup" for ::1 at 2020-12-08 03:12:25 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 922)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 2849)
+
+
+Started GET "/signup" for ::1 at 2020-12-08 03:12:28 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 918)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 2844)
+
+
+Started POST "/users" for ::1 at 2020-12-08 03:12:41 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"j08maRMPopqtPveSDGe68PhxRb4mpte4YCfnB+9wytQQPVLR21YiRThOJbB5tKNXIfc+uu5TBo7huGvoUqUC7Q==", "user"=>{"username"=>"Oat", "email"=>"c@cmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "c@cmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Oat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1054)
+Completed 200 OK in 194ms (Views: 5.8ms | ActiveRecord: 0.5ms | Allocations: 8122)
+
+
+Started POST "/users" for ::1 at 2020-12-08 03:13:22 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"QGAh/loNkCl78M2nYGj76WJ1MsZgdTKG8oPiZMYeqknfElVGklQQ9u6AH4UVu+JOu/NJwqiA47BzHG6Le8ticA==", "user"=>{"username"=>"Am", "email"=>"p@ppmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "p@ppmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Am"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Am"], ["email", "p@ppmail.com"], ["password_digest", "$2a$12$XmqZUwD/e4YWiDm3DYuZBeQm.qZxFTDF.RjNgpovzJylJCzyinIDa"], ["created_at", "2020-12-08 08:13:22.987566"], ["updated_at", "2020-12-08 08:13:22.987566"]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 196ms (ActiveRecord: 3.9ms | Allocations: 7230)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 03:13:23 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  Rendered routines/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 361)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 3664)
+
+
+Started DELETE "/logout" for ::1 at 2020-12-08 03:13:40 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2U3I+FAkx4I7TJn5CtQWX43IJ52gnlv6FY/RSBWs8u8UL+Mahw23Vligq+u4fbbmAHPEiTCjR0ur+9RhPxY6lQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 314)
+
+
+Started GET "/" for ::1 at 2020-12-08 03:13:40 -0500
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.1ms | Allocations: 64)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 2128)
+
+
+Started GET "/signup" for ::1 at 2020-12-08 03:13:42 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 929)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 2858)
+
+
+Started POST "/users" for ::1 at 2020-12-08 03:14:10 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"2sqVZB0uZWEIx6SCUGGs+H3/U8Yxqcl9y5tjWyYHiMSWHr1km15fNQ7z4tPUuohINmpB9nddjxHx8MOWePb1KA==", "user"=>{"username"=>"cat", "email"=>"r@rmail", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "r@rmail"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "cat"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 911)
+Completed 200 OK in 191ms (Views: 5.4ms | ActiveRecord: 0.4ms | Allocations: 7407)
+
+
+Started POST "/users" for ::1 at 2020-12-08 03:17:00 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"3adWwb5pP36lP2BNawzjxMHhwgXnQoaSpmwadtoLqomRc37BOBkFKqMLJhzv18d0inTQNaG2wP6cB7q7hPrXZQ==", "user"=>{"username"=>"Scope", "email"=>"w@wmail", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "w@wmail"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Scope"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Scope"], ["email", "w@wmail"], ["password_digest", "$2a$12$Wb0kKyv.4P.jVuxu71aP9.xmgc.SRsdbXi5XDarfIDO3ftSRhtAuW"], ["created_at", "2020-12-08 08:17:00.934960"], ["updated_at", "2020-12-08 08:17:00.934960"]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 199ms (ActiveRecord: 3.5ms | Allocations: 7732)
+
+
+Started GET "/routines" for ::1 at 2020-12-08 03:17:00 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  Rendered routines/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 156)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 2248)
+
+
+Started GET "/routines/new" for ::1 at 2020-12-08 03:18:23 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/new.html.erb:17
+  Rendered routines/new.html.erb within layouts/application (Duration: 16.6ms | Allocations: 10097)
+Completed 200 OK in 28ms (Views: 20.4ms | ActiveRecord: 2.0ms | Allocations: 17362)
+
+
+Started POST "/routines" for ::1 at 2020-12-08 03:18:38 -0500
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"FGEUpQnL6sogkgn8z2QClxl1XICqdaqw0hFNk1xeiIHQLnEP/OAOU4JOg5l6+5vfeEgy7PyJCOoHix+jIEon6w==", "routine"=>{"title"=>"", "season"=>"Winter", "step"=>"Cleanse", "product_id"=>""}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering routines/new.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/new.html.erb:17
+  Rendered routines/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2086)
+Completed 200 OK in 16ms (Views: 10.9ms | ActiveRecord: 0.6ms | Allocations: 8234)
+
+
+Started POST "/routines" for ::1 at 2020-12-08 03:47:13 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"Pw/FrZCe+b0WvF8G9gX7QdxIA+Jmb4DaZQJ1I48e4IP7QKAHZbUdJLRg1WNDmmIJvXVtjjCTIoCwmCcT8wpP6Q==", "routine"=>{"title"=>"Apple", "season"=>"Winter", "step"=>"Cleanse", "product_id"=>""}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering routines/new.html.erb within layouts/application
+  Rendered routines/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1924)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.4ms | Allocations: 20008)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    4:     
+    5:     <ul>
+    6: 
+    7:     <% @routines.errors.full_messages.each do |error_message| %>
+    8: 
+    9:         <li><%= error_message %></Li>
+   10:     <% end %>
+  
+app/views/routines/new.html.erb:7
+app/views/routines/new.html.erb:3
+app/controllers/routines_controller.rb:21:in `create'
+Started POST "/routines" for ::1 at 2020-12-08 03:47:32 -0500
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"Pw/FrZCe+b0WvF8G9gX7QdxIA+Jmb4DaZQJ1I48e4IP7QKAHZbUdJLRg1WNDmmIJvXVtjjCTIoCwmCcT8wpP6Q==", "routine"=>{"title"=>"Apple", "season"=>"Winter", "step"=>"Cleanse", "product_id"=>""}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering routines/new.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/new.html.erb:25
+  Rendered routines/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 5955)
+Completed 200 OK in 38ms (Views: 24.7ms | ActiveRecord: 1.1ms | Allocations: 11565)
+
+
+Started POST "/routines" for ::1 at 2020-12-08 04:00:47 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"1kjf+BzKR/EQlcTck1BxXK+XuMvaHmtTq8H/j4LMUnUSB7pS6eGjaLJJTrkmz+gUzqrWp4ziyQl+W62//tj9Hw==", "routine"=>{"title"=>"Apple", "season"=>"Winter", "step"=>"Cleanse", "product_id"=>""}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendering routines/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.7ms | Allocations: 284)
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/new.html.erb:21
+  Rendered routines/new.html.erb within layouts/application (Duration: 15.3ms | Allocations: 2626)
+Completed 200 OK in 29ms (Views: 23.2ms | ActiveRecord: 1.0ms | Allocations: 7313)
+
+
+Started DELETE "/logout" for ::1 at 2020-12-08 04:12:13 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CwnD4EELaVFdYwmTmb7YnzY5aO+1Sodh3Sc8BvJLuKR88FIMa5xchqYSChO4AEFpcobPhbwwnQZxMUVMhv/fdw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 318)
+
+
+Started GET "/" for ::1 at 2020-12-08 04:12:13 -0500
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.6ms | Allocations: 188)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 5380)
+
+
+Started GET "/login" for ::1 at 2020-12-08 04:12:15 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1024)
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 9157)
+
+
+Started POST "/login" for ::1 at 2020-12-08 04:12:21 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"VsWxvXEJtAP0e9tNgVnNNETlNFsz+WgTVgmTvCh20/GadeUG617cQnf/DNwmPPu4LxVsbQ1Py/EelvO3MSy7LA==", "user"=>{"username"=>"Am", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Am"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 184ms (ActiveRecord: 0.4ms | Allocations: 1063)
+
+
+Started GET "/login" for ::1 at 2020-12-08 04:12:21 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (Duration: 0.9ms | Allocations: 724)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 2640)
+
+

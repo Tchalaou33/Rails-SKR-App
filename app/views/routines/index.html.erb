@@ -7,17 +7,9 @@
 <%= form_tag('/routines', method: "get") do %>
   <%= label_tag(:season, "Season") %>
   <%= select_tag(:season, options_for_select([ "Winter", "Summer"])) %>
-  <%=submit_tag("Search") %>
+  <%= submit_tag("Search") %>
+  
 
 
-<br></br>
-# <% end %>
-
-<%= @routines.each do |routine| %>
-  <h4><a href="/routines/<%= routine.id %>"></a></h4>
-  <p><%= @routine.title %></p>
- 
-
-<br><br>
 
 <% end %>
