@@ -3,7 +3,7 @@ class User < ApplicationRecord
     has_many :routines
     has_many :products, through: :routines
 
-    validates :email, presence: true 
-    validates :email, uniqueness: true
+    validates :email, :username, presence: true 
+    validates :email, :username, uniqueness: true
 
 end
