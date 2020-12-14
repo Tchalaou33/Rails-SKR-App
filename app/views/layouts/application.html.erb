@@ -9,7 +9,16 @@
   </head>
 
   <body>
+  <nav class="navbar">
+
+  <% if logged_in? %>
     <%= button_to 'Log Out', logout_path, method: :delete %>
-    <%= yield %>
+    <%= button_to 'All Routines', routines_path %>
+    <%= button_to 'Create New Routine', new_routine_path %>
+    <%= button_to 'All Products', products_path %>
+    </nav>
+  <% end %> 
+
+  <%= yield %>
   </body>
 </html>
