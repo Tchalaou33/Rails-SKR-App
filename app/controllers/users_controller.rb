@@ -11,10 +11,16 @@ class UsersController < ApplicationController
         if @user.save #@user.errors
             #login
             session[:user_id] = @user.id
-            redirect_to routines_path
+            # redirect_to routines_path
+            redirect_to user_path(@user)
         else
             render :new
         end
+    end
+
+    def show
+        @user = User.find_by_id(params[:id])
+        redirect_to '/' if !@user
     end
 
     private
