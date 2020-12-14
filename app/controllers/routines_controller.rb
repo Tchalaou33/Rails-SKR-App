@@ -23,11 +23,14 @@ class RoutinesController < ApplicationController
     end
 
     def index
+        
+
         if params[:prouduct_id] && product = Product.find_by_id(params[:product_id])
             #nested route
             @routine = product.routines
         else
             @routines = Routine.all
+           
         end
     
     end
