@@ -1,8 +1,8 @@
 <h1>Log In Here</h1>
 
-<%= flash[:error] %> 
+<p><%= flash[:error] %></p> 
 
-<%= form_for @user, url: '/login' do |f|  %>
+<%= form_for(:user) do |f| %>
 
     <%= f.label :username %>
     <%= f.text_field :username %>
@@ -16,3 +16,5 @@
 <% end %> 
 
 <a href="/">Back</a>
+
+
