@@ -11,8 +11,7 @@ class UsersController < ApplicationController
         if @user.save #@user.errors
             #login
             session[:user_id] = @user.id
-            # redirect_to routines_path
-            redirect_to user_path(@user)
+            redirect_to routines_path
         else
             render :new
         end
