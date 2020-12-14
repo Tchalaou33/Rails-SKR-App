@@ -13,11 +13,11 @@
 
     <% if logged_in? %>
       <%= button_to 'Log Out', logout_path, method: :delete %>
-      <%= button_to 'All Routines', routines_path %>
-      <%= button_to 'Create New Routine', new_routine_path %>
-      <%= button_to 'All Products', products_path %>
+      <%= link_to 'All Routines', routines_path %>
+      <%= link_to 'Create New Routine', new_routine_path %>
+      <%= link_to 'All Products', products_path %>
       <% end %>
-      
+
     <br></br>
   </div>
 
