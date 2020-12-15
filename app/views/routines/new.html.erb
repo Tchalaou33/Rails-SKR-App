@@ -3,22 +3,27 @@
 <%= form_for(@routine) do |f| %>
 
     <%= render partial: 'layouts/errors', locals: {object: @routine} %>
+    <div>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </div>
 
-    
+    <div>
+        <%= f.label :season %>
+        <%= f.select(:season, options_for_select([ "Winter", "Summer"])) %>
+    </div>
 
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-
-    <%= f.label :season %>
-    <%= f.select(:season, options_for_select([ "Winter", "Summer"])) %>
-
-    <%= f.label :step %>
-    <%= f.select(:step, ["Cleanse", "Treat", "Hydreate", "Protect"]) %>
+    <div>
+        <%= f.label :step %>
+        <%= f.select(:step, ["Cleanse", "Treat", "Hydreate", "Protect"]) %>
+    </div>
 
     <br></br>
 
-    <%= f.label :product_id, "Select a Product" %>
+
+    <p> <%= f.label :product_id, "Select a Product" %>
     <%= f.collection_select :product_id, Product.all, :id, :name, prompt: true %>
+    </p> 
 
     <br></br>
     <%= f.submit "Submit" %>
@@ -27,3 +32,5 @@
 
 
 
+    t.integer "product_id"
+    t.integer "user_id"
