@@ -21,31 +21,23 @@
     <br></br>
 
 
-    <p> <%= f.label :product_id, "Select a Product" %> </p> 
+    <%= f.label :product_id, "Select a Product" %> 
     <div>
         <%= f.collection_select :product_id, Product.all, :id, :name, prompt: true %>
-    </p> 
-
-    <br></br>
+    </div>
 
     <p> Or Add a new Product:</p>
-
-    </div>
+    <div>
         <%=f.fields_for :product do |p| %>
-        <div>
             <%= p.label :name %>
             <%= p.text_field :name %>
-         </div>
-
-         <div>
+         
             <%= p.label :content %>
             <%= p.text_field :content %>
-         </div>
-
-
         <% end %>
+    </div>
 
-
+<br></br>
 
     <%= f.submit "Submit" %>
 
@@ -53,5 +45,4 @@
 
 
 
-    t.integer "product_id"
-    t.integer "user_id"
+   

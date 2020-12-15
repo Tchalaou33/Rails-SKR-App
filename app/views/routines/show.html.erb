@@ -1,4 +1,4 @@
-<h1> Show Me</h1>
+<h1> MY Routines</h1>
 
 
 <%= @routine.title %> 
@@ -12,9 +12,14 @@
 <%= @routine.step %>
 <br></br>
 
+<%= @product.name %>
+
+<%= @product.content %>
+
 <%= button_to "Edit Routine", edit_routine_path(@routine) %>  
 <%= button_to "Delete Routine", routine_path(@routine), method: :delete %>
 
 
 # how to show user that belongs_to routine <%= @user[:username], <%= @routine.step.each do |routine| 
 
+<a href="/routines">Back</a>
