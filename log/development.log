@@ -10315,3 +10315,109 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 4257)
 
 
+Started GET "/products" for ::1 at 2020-12-15 02:52:47 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1380)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2374)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1> All Products </h1>
+    2: 
+    3: <%= form_for@product.each do |f| %>
+    4: 
+    5: 
+    6:     <% end %>
+  
+app/views/products/index.html.erb:3
+Started GET "/products" for ::1 at 2020-12-15 02:54:23 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered products/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 8886)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 2.0ms | Allocations: 11672)
+
+
+  
+ActionView::Template::Error (undefined method `to_key' for #<Product::ActiveRecord_Relation:0x00007f053804de60>
+Did you mean?  to_set
+               to_ary):
+    1: <h1> All Products </h1>
+    2: 
+    3: <%= form_for(@product) do |f| %>
+    4: 
+    5: 
+    6:     <% end %>
+  
+app/views/products/index.html.erb:3
+Started GET "/products" for ::1 at 2020-12-15 02:54:52 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/mnt/c/Users/DreaTu/skincare-routine/app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end
+app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end
+app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end
+Started GET "/products" for ::1 at 2020-12-15 02:55:39 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/mnt/c/Users/DreaTu/skincare-routine/app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end
+app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end
+app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end
+Started GET "/products" for ::1 at 2020-12-15 02:57:01 -0500
+  
+SyntaxError (/mnt/c/Users/DreaTu/skincare-routine/app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end
+app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end
+app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end
+Started GET "/products" for ::1 at 2020-12-15 02:57:09 -0500
+  
+SyntaxError (/mnt/c/Users/DreaTu/skincare-routine/app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end
+app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end
+app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end
+Started GET "/products" for ::1 at 2020-12-15 02:57:21 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1328)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2329)
+
+
+  
+ActionView::Template::Error (undefined method `all' for nil:NilClass):
+    1: <h1> All Products </h1>
+    2: 
+    3: 
+    4: <% @products.all.each do |routine| %>
+    5: 
+    6: 
+    7: <% end %>
+  
+app/views/products/index.html.erb:4
+Started GET "/products" for ::1 at 2020-12-15 02:57:42 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/mnt/c/Users/DreaTu/skincare-routine/app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end
+app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end
+app/controllers/products_controller.rb:7: syntax error, unexpected end-of-input, expecting end
+Started GET "/routines/new" for ::1 at 2020-12-15 03:08:34 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 1.5ms | Allocations: 157)
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/new.html.erb:26
+  Rendered routines/new.html.erb within layouts/application (Duration: 25.7ms | Allocations: 11851)
+Completed 200 OK in 52ms (Views: 35.2ms | ActiveRecord: 4.2ms | Allocations: 21102)
+
+
