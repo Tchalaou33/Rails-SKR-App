@@ -22,6 +22,7 @@
     <%= f.label :product_id, "Select a Product" %> 
     <div>
         <%= f.collection_select :product_id, Product.all, :id, :name, prompt: true %>
+        
     </div>
 
     <% if !params[:product_id] %>

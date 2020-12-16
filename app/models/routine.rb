@@ -8,11 +8,7 @@ class Routine < ApplicationRecord
     validates :title, uniqueness: true
     validate :not_a_duplicate
 
-    #scope :alpha -> {order(:name)}
 
-    def self.alpha
-        order(:title)
-      end
 
     def not_a_duplicate
         # if there is already an ice cream with that flavor && brand, throw an error
