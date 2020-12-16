@@ -2,12 +2,12 @@ class ProductsController < ApplicationController
 
     def new
         @product = Product.new
-        # @product.build_routine
+        @product.build_routine
     end 
 
     def create
         @product = Product.create(product_params)
-        @product.user_id = session[:user_id]
+        # @product.user_id = session[:user_id]
         if @product.save
             redirect_to product_path(@product)
         else
@@ -16,14 +16,13 @@ class ProductsController < ApplicationController
     end
    
     def index
-        @product = Product.all do |p|
+        @products = Product.all 
     end
 
      private
 
     def product_params
-        params.require(:product).permit(:name, :content, :prouduct_id, 
-            product_attributes: [:name])
+        params.require(:product).permit(:name, :content)
     end
 
-end
+end 

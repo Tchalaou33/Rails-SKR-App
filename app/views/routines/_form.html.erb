@@ -1,0 +1,44 @@
+<%= form_for(@routine) do |f| %>
+
+    <%= render partial: 'layouts/errors', locals: {object: @routine} %>
+    <div>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </div>
+
+    <div>
+        <%= f.label :season %>
+        <%= f.select(:season, options_for_select([ "Winter", "Summer"])) %>
+    </div>
+
+    <div>
+        <%= f.label :step %>
+        <%= f.select(:step, ["Cleanse", "Treat", "Hydreate", "Protect"]) %>
+    </div>
+
+    <br></br>
+
+
+    <%= f.label :product_id, "Select a Product" %> 
+    <div>
+        <%= f.collection_select :product_id, Product.all, :id, :name, prompt: true %>
+    </div>
+
+    <% if !params[:product_id] %>
+
+    <h4> Or Add a new Product:</h4>
+    <div>
+        <%=f.fields_for :product do |p| %>
+            <%= p.label :name %>
+            <%= p.text_field :name %>
+    </div>
+    <div>    
+            <%= p.label :content %>
+            <%= p.text_field :content %>
+        <% end %>
+    <% end %>
+    </div>
+
+    <%= f.submit "Submit" %>
+
+    <% end %>

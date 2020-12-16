@@ -1,25 +1,24 @@
 <h1> MY Routines</h1>
 
-
-<%= @routine.title %> 
-<br></br>
-
-
-<%= @routine.season %> 
-<br></br>
+<br>
+<h2><%= @routine.title %></h2>
 
 
-<%= @routine.step %>
-<br></br>
 
-<%= @product.name %>
-
-<%= @product.content %>
-
-<%= button_to "Edit Routine", edit_routine_path(@routine) %>  
-<%= button_to "Delete Routine", routine_path(@routine), method: :delete %>
+<h3><%= @routine.season %> - <%= @routine.step %></h3>
 
 
-# how to show user that belongs_to routine <%= @user[:username], <%= @routine.step.each do |routine| 
+<div>
+<h4><%= @routine.product.name %></h4>
+</div>
+
+<%= @routine.product.content %>
+
+<div>
+<% if @routine.user == current_user %>
+    <%= link_to "Edit Routine", edit_routine_path(@routine) %>  
+    <%= button_to "Delete Routine", routine_path(@routine), method: :delete %>
+<% end %>
+</div>
 
 <a href="/routines">Back</a>

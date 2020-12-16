@@ -1,20 +1,3 @@
-<h1> I Can Edit</h1>
+<h1> Edit Routine</h1>
 
-<%= form_for(@routine) do |f| %>
-
-    <%= render partial: 'layouts/errors', locals: {object: @routine} %>
-
-    
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-
-    <%= f.label :season %>
-    <%= f.select(:season, options_for_select([ "Winter", "Summer"])) %>
-
-    <%= f.label :step %>
-    <%= f.select(:step, ["Cleanse", "Treat", "Hydrate", "Protect"]) %>
-
-
-    <%= f.submit "Update" %>
-
-    <% end %>
+<%= render 'form' %>
