@@ -1,6 +1,6 @@
+<%= render partial: 'layouts/errors', locals: {object: @routine} %>
 <%= form_for(@routine) do |f| %>
 
-    <%= render partial: 'layouts/errors', locals: {object: @routine} %>
     <div>
         <%= f.label :title %>
         <%= f.text_field :title %>
