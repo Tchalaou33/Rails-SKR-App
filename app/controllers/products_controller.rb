@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
 
     def create
         @product = Product.create(product_params)
-        # @product.user_id = session[:user_id]
+        @product.user_id = session[:user_id]
         if @product.save
             redirect_to product_path(@product)
         else
@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
     end
    
     def index
-        @products = Product.all 
+        @products = Product.all  
     end
 
      private
