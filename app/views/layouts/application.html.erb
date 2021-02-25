@@ -16,7 +16,10 @@
       <%= link_to 'All Routines', routines_path %>
       <%= link_to 'Create New Routine', new_routine_path %>
       <%= link_to 'All Products', products_path %>
-      <% end %>
+    <% else %>
+      <%= link_to 'Sign Up With Google', '/auth/google_oauth2' %>
+
+    <% end %>
 
     <br></br>
   </div>

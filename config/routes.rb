@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
   resources :users
   
-  get '/auth/facebook/callback' => 'sessions#create'
+  get '/auth/google_oauth2/callback' => 'sessions#create'
 
 
   resources :products do

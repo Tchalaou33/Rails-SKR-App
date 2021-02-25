@@ -18678,3 +18678,1483 @@ Processing by RoutinesController#show as HTML
 Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 0.8ms | Allocations: 5394)
 
 
+Started DELETE "/logout" for ::1 at 2020-12-16 11:48:07 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"K/6Brg8ptm4yjOkVjX2lGLVxALa9g1TrI18XF1kDTNLabDegY/4OBCTcC2P8Lkg0DBFW7d0YhbECAEg2ZuSRBw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 315)
+
+
+Started GET "/" for ::1 at 2020-12-16 11:48:07 -0500
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 2.0ms | Allocations: 198)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 2910)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>SkincareRoutine</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+  </head>
+
+  <body>
+  <div class="nav">
+
+    <% if logged_in? %>
+      <%= button_to 'Log Out', logout_path, method: :delete %>
+      <%= link_to 'All Routines', routines_path %>
+      <%= link_to 'Create New Routine', new_routine_path %>
+      <%= link_to 'All Products', products_path %>
+    <% else %>
+      <%= link_to "Sign Up With Google", /auth/google_oauth2 %>
+
+    <% end %>
+
+    <br></br>
+  </div>
+
+  <%= yield %>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>SkincareRoutine</title>
+5:        <%= csrf_meta_tags %>
+6:        <%= csp_meta_tag %>
+7:    
+8:        <%= stylesheet_link_tag    'application', media: 'all' %>
+9:      </head>
+10:    
+11:      <body>
+12:      <div class="nav">
+13:    
+14:        <% if logged_in? %>
+15:          <%= button_to 'Log Out', logout_path, method: :delete %>
+16:          <%= link_to 'All Routines', routines_path %>
+17:          <%= link_to 'Create New Routine', new_routine_path %>
+18:          <%= link_to 'All Products', products_path %>
+19:        <% else %>
+20:          <%= link_to "Sign Up With Google", /auth/google_oauth2 %>
+21:    
+22:        <% end %>
+23:    
+24:        <br></br>
+25:      </div>
+26:    
+27:      <%= yield %>
+28:      </body>
+29:    </html>
+  
+app/views/layouts/application.html.erb:20: unknown regexp options - ggl
+app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:20: unknown regexp options - ggl
+app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:20: unknown regexp options - ggl
+app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:20: unknown regexp options - ggl
+app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:20: unknown regexp options - ggl
+app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:20: unknown regexp options - ggl
+app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/" for ::1 at 2020-12-16 11:48:41 -0500
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 1.2ms | Allocations: 190)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2291)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>SkincareRoutine</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+  </head>
+
+  <body>
+  <div class="nav">
+
+    <% if logged_in? %>
+      <%= button_to 'Log Out', logout_path, method: :delete %>
+      <%= link_to 'All Routines', routines_path %>
+      <%= link_to 'Create New Routine', new_routine_path %>
+      <%= link_to 'All Products', products_path %>
+    <% else %>
+      <%= link_to 'Sign Up With Google', /auth/google_oauth2 %>
+
+    <% end %>
+
+    <br></br>
+  </div>
+
+  <%= yield %>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>SkincareRoutine</title>
+5:        <%= csrf_meta_tags %>
+6:        <%= csp_meta_tag %>
+7:    
+8:        <%= stylesheet_link_tag    'application', media: 'all' %>
+9:      </head>
+10:    
+11:      <body>
+12:      <div class="nav">
+13:    
+14:        <% if logged_in? %>
+15:          <%= button_to 'Log Out', logout_path, method: :delete %>
+16:          <%= link_to 'All Routines', routines_path %>
+17:          <%= link_to 'Create New Routine', new_routine_path %>
+18:          <%= link_to 'All Products', products_path %>
+19:        <% else %>
+20:          <%= link_to 'Sign Up With Google', /auth/google_oauth2 %>
+21:    
+22:        <% end %>
+23:    
+24:        <br></br>
+25:      </div>
+26:    
+27:      <%= yield %>
+28:      </body>
+29:    </html>
+  
+app/views/layouts/application.html.erb:20: unknown regexp options - ggl
+app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:20: unknown regexp options - ggl
+app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:20: unknown regexp options - ggl
+app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:20: unknown regexp options - ggl
+app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:20: unknown regexp options - ggl
+app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:20: unknown regexp options - ggl
+app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/" for ::1 at 2020-12-16 11:49:50 -0500
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 1.1ms | Allocations: 190)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 3215)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2020-12-16 11:50:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth2"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auth/google_oauth2" for ::1 at 2020-12-16 11:53:54 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth2"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-12-16 11:54:11 -0500
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.3ms | Allocations: 65)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 2230)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2020-12-16 11:54:12 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/auth/google_oauth2"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/signup" for ::1 at 2020-12-16 12:04:09 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 1.3ms | Allocations: 579)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2986)
+Completed 200 OK in 22ms (Views: 11.4ms | ActiveRecord: 1.3ms | Allocations: 12007)
+
+
+Started POST "/users" for ::1 at 2020-12-16 12:04:26 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"lyl0ROP03tlwmuOzslyY46nvrkSYrUfwVfrHGSmZmeMrFHVJ07yN9+CFsUGOGWwyFpI883CqxJySkpChFPibnQ==", "user"=>{"username"=>"Vay", "email"=>"v@vmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "v@vmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Vay"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Vay"], ["email", "v@vmail.com"], ["password_digest", "$2a$12$e37dOXnqlWKTaMQjprzsNOeb5fnx6NjYqZdDqpdRSjmuBDn23AyqS"], ["created_at", "2020-12-16 17:04:26.246957"], ["updated_at", "2020-12-16 17:04:26.246957"]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 218ms (ActiveRecord: 5.2ms | Allocations: 9741)
+
+
+Started GET "/routines" for ::1 at 2020-12-16 12:04:26 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.7ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  Rendered routines/index.html.erb within layouts/application (Duration: 55.1ms | Allocations: 21305)
+Completed 200 OK in 72ms (Views: 62.5ms | ActiveRecord: 4.4ms | Allocations: 25455)
+
+
+Started GET "/routines/new" for ::1 at 2020-12-16 12:04:55 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 2.0ms | Allocations: 608)
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/_form.html.erb:24
+  Rendered routines/_form.html.erb (Duration: 16.7ms | Allocations: 4776)
+  Rendered routines/new.html.erb within layouts/application (Duration: 20.3ms | Allocations: 5510)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.6ms | Allocations: 8789)
+
+
+Started POST "/routines" for ::1 at 2020-12-16 12:05:09 -0500
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"X6J+/EegMX2S08fyVTofEJMqJJPvY1bJ6qjcVJop5ZtTjNWS3xN9j95MGYW+AYQl3dUmlIBiA1MCKx9WHF0yjQ==", "routine"=>{"title"=>"Apple", "season"=>"Winter", "step"=>"Cleanse", "product_id"=>"1", "product_attributes"=>{"name"=>"", "content"=>""}}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `current_user'
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:21:in `create'
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:22:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  [1m[36mRoutine Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "routines" WHERE "routines"."title" = ? LIMIT ?[0m  [["title", "Apple"], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  [1m[36mRoutine Load (0.9ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."title" = ? AND "routines"."product_id" IS NULL LIMIT ?[0m  [["title", "Apple"], ["LIMIT", 1]]
+  ↳ app/models/routine.rb:15:in `not_a_duplicate'
+  [1m[36mProduct Create (1.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "created_at", "updated_at", "content") VALUES (?, ?, ?, ?)[0m  [["name", ""], ["created_at", "2020-12-16 17:05:09.233159"], ["updated_at", "2020-12-16 17:05:09.233159"], ["content", ""]]
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  [1m[36mRoutine Create (0.3ms)[0m  [1m[32mINSERT INTO "routines" ("title", "season", "step", "created_at", "updated_at", "product_id", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Apple"], ["season", "Winter"], ["step", "Cleanse"], ["created_at", "2020-12-16 17:05:09.240512"], ["updated_at", "2020-12-16 17:05:09.240512"], ["product_id", 8], ["user_id", 11]]
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+Redirected to http://localhost:3000/routines/41
+Completed 302 Found in 69ms (ActiveRecord: 7.8ms | Allocations: 12393)
+
+
+Started GET "/routines/41" for ::1 at 2020-12-16 12:05:09 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:74:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `current_user'
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:18
+  Rendered routines/show.html.erb within layouts/application (Duration: 20.6ms | Allocations: 3439)
+Completed 200 OK in 56ms (Views: 50.9ms | ActiveRecord: 1.2ms | Allocations: 7212)
+
+
+Started GET "/routines" for ::1 at 2020-12-16 12:05:21 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  Rendered routines/index.html.erb within layouts/application (Duration: 85.0ms | Allocations: 9634)
+Completed 200 OK in 102ms (Views: 96.8ms | ActiveRecord: 2.9ms | Allocations: 12909)
+
+
+Started GET "/routines/41" for ::1 at 2020-12-16 12:05:32 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mRoutine Load (0.8ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:74:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `current_user'
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:18
+  Rendered routines/show.html.erb within layouts/application (Duration: 15.8ms | Allocations: 2601)
+Completed 200 OK in 31ms (Views: 23.0ms | ActiveRecord: 1.9ms | Allocations: 5331)
+
+
+Started GET "/routines/41/edit" for ::1 at 2020-12-16 12:05:37 -0500
+Processing by RoutinesController#edit as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:74:in `set_routine'
+  Rendering routines/edit.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.6ms | Allocations: 157)
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/_form.html.erb:24
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/routines/_form.html.erb:32
+  Rendered routines/_form.html.erb (Duration: 19.8ms | Allocations: 4624)
+  Rendered routines/edit.html.erb within layouts/application (Duration: 23.6ms | Allocations: 5425)
+Completed 200 OK in 40ms (Views: 31.5ms | ActiveRecord: 1.3ms | Allocations: 8155)
+
+
+Started PATCH "/routines/41" for ::1 at 2020-12-16 12:05:50 -0500
+Processing by RoutinesController#update as HTML
+  Parameters: {"authenticity_token"=>"nyMfRe39EGeNHX6PJ9JKRgiYzHj1fxz6Ziq+tTyhZW5GJWgs9EhhWnLZ8xZn/8OmAFMfeaFQpwVJTH1YGTwUdg==", "routine"=>{"title"=>"Apple", "season"=>"Winter", "step"=>"Cleanse", "product_id"=>"1", "product_attributes"=>{"name"=>"", "content"=>"Developed with dermatologists, the CeraVe Hydrating Facial Cleanser is a unique formula that hydrates while it cleanses.", "id"=>"8"}}, "commit"=>"Submit", "id"=>"41"}
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:74:in `set_routine'
+[31mUnpermitted parameter: :id[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/routines_controller.rb:56:in `update'
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:56:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:56:in `update'
+  [1m[36mRoutine Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "routines" WHERE "routines"."title" = ? AND "routines"."id" != ? LIMIT ?[0m  [["title", "Apple"], ["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:56:in `update'
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."title" = ? AND "routines"."product_id" IS NULL LIMIT ?[0m  [["title", "Apple"], ["LIMIT", 1]]
+  ↳ app/models/routine.rb:15:in `not_a_duplicate'
+  [1m[36mProduct Create (1.8ms)[0m  [1m[32mINSERT INTO "products" ("name", "created_at", "updated_at", "content") VALUES (?, ?, ?, ?)[0m  [["name", ""], ["created_at", "2020-12-16 17:05:50.448252"], ["updated_at", "2020-12-16 17:05:50.448252"], ["content", "Developed with dermatologists, the CeraVe Hydrating Facial Cleanser is a unique formula that hydrates while it cleanses."]]
+  ↳ app/controllers/routines_controller.rb:56:in `update'
+  [1m[36mRoutine Update (0.3ms)[0m  [1m[33mUPDATE "routines" SET "product_id" = ?, "updated_at" = ? WHERE "routines"."id" = ?[0m  [["product_id", 9], ["updated_at", "2020-12-16 17:05:50.458680"], ["id", 41]]
+  ↳ app/controllers/routines_controller.rb:56:in `update'
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/routines_controller.rb:56:in `update'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 67ms (ActiveRecord: 6.5ms | Allocations: 13306)
+
+
+Started GET "/routines" for ::1 at 2020-12-16 12:05:50 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  Rendered routines/index.html.erb within layouts/application (Duration: 77.3ms | Allocations: 10199)
+Completed 200 OK in 88ms (Views: 83.8ms | ActiveRecord: 3.2ms | Allocations: 13466)
+
+
+Started GET "/routines/new" for ::1 at 2020-12-16 12:06:14 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.7ms | Allocations: 157)
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/_form.html.erb:24
+  Rendered routines/_form.html.erb (Duration: 11.9ms | Allocations: 3455)
+  Rendered routines/new.html.erb within layouts/application (Duration: 14.4ms | Allocations: 3765)
+Completed 200 OK in 28ms (Views: 22.6ms | ActiveRecord: 0.4ms | Allocations: 6131)
+
+
+Started POST "/routines" for ::1 at 2020-12-16 12:06:43 -0500
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"nuZ8uZ37z6q/6KjJaUnNG6IIOUCslEZRauL4emUFgPGSyNfXBUiDWPN3dr6CclYu7Pc7R8OVE8uCYTt443FX5w==", "routine"=>{"title"=>"I'M In", "season"=>"Winter", "step"=>"Cleanse", "product_id"=>"5", "product_attributes"=>{"name"=>"", "content"=>""}}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `current_user'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:21:in `create'
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:22:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  [1m[36mRoutine Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "routines" WHERE "routines"."title" = ? LIMIT ?[0m  [["title", "I'M In"], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  [1m[36mRoutine Load (0.1ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."title" = ? AND "routines"."product_id" IS NULL LIMIT ?[0m  [["title", "I'M In"], ["LIMIT", 1]]
+  ↳ app/models/routine.rb:15:in `not_a_duplicate'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  Rendering routines/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.3ms | Allocations: 137)
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/_form.html.erb:24
+  Rendered routines/_form.html.erb (Duration: 6.8ms | Allocations: 2648)
+  Rendered routines/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 2712)
+Completed 200 OK in 63ms (Views: 16.5ms | ActiveRecord: 2.4ms | Allocations: 11531)
+
+
+Started POST "/routines" for ::1 at 2020-12-16 12:06:57 -0500
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"vMon8PnSBXoi3yaoF7VGtE98QGOnghX8QvF1uQA3BSGw5IyeYWFJiG5A+N/8jt2BAYNCZMiDQGaqcra7hkPSNw==", "routine"=>{"title"=>"Git", "season"=>"Winter", "step"=>"Cleanse", "product_id"=>"5", "product_attributes"=>{"name"=>"", "content"=>""}}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `current_user'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:21:in `create'
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:22:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  [1m[36mRoutine Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "routines" WHERE "routines"."title" = ? LIMIT ?[0m  [["title", "Git"], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  [1m[36mRoutine Load (0.1ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."title" = ? AND "routines"."product_id" IS NULL LIMIT ?[0m  [["title", "Git"], ["LIMIT", 1]]
+  ↳ app/models/routine.rb:15:in `not_a_duplicate'
+  [1m[36mProduct Create (1.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "created_at", "updated_at", "content") VALUES (?, ?, ?, ?)[0m  [["name", ""], ["created_at", "2020-12-16 17:06:57.426778"], ["updated_at", "2020-12-16 17:06:57.426778"], ["content", ""]]
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  [1m[36mRoutine Create (0.3ms)[0m  [1m[32mINSERT INTO "routines" ("title", "season", "step", "created_at", "updated_at", "product_id", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Git"], ["season", "Winter"], ["step", "Cleanse"], ["created_at", "2020-12-16 17:06:57.435893"], ["updated_at", "2020-12-16 17:06:57.435893"], ["product_id", 10], ["user_id", 11]]
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+Redirected to http://localhost:3000/routines/42
+Completed 302 Found in 69ms (ActiveRecord: 6.5ms | Allocations: 11899)
+
+
+Started GET "/routines/42" for ::1 at 2020-12-16 12:06:57 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:74:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `current_user'
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:18
+  Rendered routines/show.html.erb within layouts/application (Duration: 21.6ms | Allocations: 2605)
+Completed 200 OK in 37ms (Views: 28.0ms | ActiveRecord: 1.3ms | Allocations: 5333)
+
+
+Started GET "/routines/42/edit" for ::1 at 2020-12-16 12:07:14 -0500
+Processing by RoutinesController#edit as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:74:in `set_routine'
+  Rendering routines/edit.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/_form.html.erb:24
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/routines/_form.html.erb:32
+  Rendered routines/_form.html.erb (Duration: 16.6ms | Allocations: 3562)
+  Rendered routines/edit.html.erb within layouts/application (Duration: 18.4ms | Allocations: 3724)
+Completed 200 OK in 34ms (Views: 24.6ms | ActiveRecord: 1.5ms | Allocations: 6456)
+
+
+Started GET "/routines/new" for ::1 at 2020-12-16 12:07:19 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/_form.html.erb:24
+  Rendered routines/_form.html.erb (Duration: 6.7ms | Allocations: 2696)
+  Rendered routines/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2760)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.4ms | Allocations: 4983)
+
+
+Started POST "/routines" for ::1 at 2020-12-16 12:07:29 -0500
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"9qodvDRD9k2T2ajoGqDB+CHyu1rDdwy6aifcGYb/+n/6hLbSrPC6v99Gdp/xm1rNbw25Xax2WSCCpB8bAIstaQ==", "routine"=>{"title"=>"Take", "season"=>"Winter", "step"=>"Cleanse", "product_id"=>"", "product_attributes"=>{"name"=>"CeraVe  Hydrating Facial Cleanser", "content"=>"Developed with dermatologists, the CeraVe Hydrating Facial Cleanser is a unique formula that hydrates while it cleanses."}}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `current_user'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:22:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  [1m[36mRoutine Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "routines" WHERE "routines"."title" = ? LIMIT ?[0m  [["title", "Take"], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  [1m[36mRoutine Load (0.1ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."title" = ? AND "routines"."product_id" IS NULL LIMIT ?[0m  [["title", "Take"], ["LIMIT", 1]]
+  ↳ app/models/routine.rb:15:in `not_a_duplicate'
+  [1m[36mProduct Create (1.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "created_at", "updated_at", "content") VALUES (?, ?, ?, ?)[0m  [["name", "CeraVe  Hydrating Facial Cleanser"], ["created_at", "2020-12-16 17:07:29.749694"], ["updated_at", "2020-12-16 17:07:29.749694"], ["content", "Developed with dermatologists, the CeraVe Hydrating Facial Cleanser is a unique formula that hydrates while it cleanses."]]
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  [1m[36mRoutine Create (0.3ms)[0m  [1m[32mINSERT INTO "routines" ("title", "season", "step", "created_at", "updated_at", "product_id", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Take"], ["season", "Winter"], ["step", "Cleanse"], ["created_at", "2020-12-16 17:07:29.756762"], ["updated_at", "2020-12-16 17:07:29.756762"], ["product_id", 11], ["user_id", 11]]
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+Redirected to http://localhost:3000/routines/43
+Completed 302 Found in 54ms (ActiveRecord: 5.7ms | Allocations: 10654)
+
+
+Started GET "/routines/43" for ::1 at 2020-12-16 12:07:29 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:74:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `current_user'
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:18
+  Rendered routines/show.html.erb within layouts/application (Duration: 17.5ms | Allocations: 2334)
+Completed 200 OK in 36ms (Views: 28.1ms | ActiveRecord: 1.4ms | Allocations: 4919)
+
+
+Started GET "/routines" for ::1 at 2020-12-16 12:13:27 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  Rendered routines/index.html.erb within layouts/application (Duration: 137.5ms | Allocations: 29596)
+Completed 200 OK in 152ms (Views: 142.2ms | ActiveRecord: 5.2ms | Allocations: 33000)
+
+
+Started GET "/routines/35" for ::1 at 2020-12-16 12:33:59 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:74:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `current_user'
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:12
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:18
+  Rendered routines/show.html.erb within layouts/application (Duration: 39.7ms | Allocations: 14852)
+Completed 200 OK in 72ms (Views: 51.9ms | ActiveRecord: 1.9ms | Allocations: 24680)
+
+
+Started GET "/routines" for ::1 at 2020-12-16 12:34:10 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.9ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:4
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  Rendered routines/index.html.erb within layouts/application (Duration: 108.8ms | Allocations: 12567)
+Completed 200 OK in 120ms (Views: 113.8ms | ActiveRecord: 5.0ms | Allocations: 14933)
+
+
+Started GET "/routines/32" for ::1 at 2020-12-16 12:34:12 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:74:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `current_user'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:12
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:18
+  Rendered routines/show.html.erb within layouts/application (Duration: 18.8ms | Allocations: 2215)
+Completed 200 OK in 36ms (Views: 28.7ms | ActiveRecord: 1.7ms | Allocations: 4811)
+
+
+Started GET "/routines" for ::1 at 2020-12-16 12:34:22 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:4
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  Rendered routines/index.html.erb within layouts/application (Duration: 122.5ms | Allocations: 12319)
+Completed 200 OK in 135ms (Views: 129.1ms | ActiveRecord: 5.0ms | Allocations: 14533)
+
+
+Started GET "/routines/32" for ::1 at 2020-12-16 12:34:30 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:74:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `current_user'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:12
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:18
+  Rendered routines/show.html.erb within layouts/application (Duration: 19.5ms | Allocations: 2217)
+Completed 200 OK in 35ms (Views: 27.2ms | ActiveRecord: 2.0ms | Allocations: 4812)
+
+
+Started GET "/routines" for ::1 at 2020-12-16 12:34:38 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  Rendered routines/index.html.erb within layouts/application (Duration: 102.8ms | Allocations: 12317)
+Completed 200 OK in 112ms (Views: 106.9ms | ActiveRecord: 4.3ms | Allocations: 14527)
+
+
+Started GET "/routines/35" for ::1 at 2020-12-16 12:34:58 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:74:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `current_user'
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:12
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:18
+  Rendered routines/show.html.erb within layouts/application (Duration: 21.9ms | Allocations: 2218)
+Completed 200 OK in 37ms (Views: 28.9ms | ActiveRecord: 3.0ms | Allocations: 4813)
+
+
+Started GET "/routines" for ::1 at 2020-12-16 12:35:04 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  Rendered routines/index.html.erb within layouts/application (Duration: 99.9ms | Allocations: 12318)
+Completed 200 OK in 114ms (Views: 107.9ms | ActiveRecord: 4.6ms | Allocations: 14525)
+
+
+Started GET "/routines/35" for ::1 at 2020-12-16 12:35:09 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:74:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `current_user'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:12
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:18
+  Rendered routines/show.html.erb within layouts/application (Duration: 22.3ms | Allocations: 2221)
+Completed 200 OK in 37ms (Views: 29.9ms | ActiveRecord: 1.8ms | Allocations: 4816)
+
+
+Started GET "/routines" for ::1 at 2020-12-16 12:35:25 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  Rendered routines/index.html.erb within layouts/application (Duration: 105.8ms | Allocations: 12317)
+Completed 200 OK in 116ms (Views: 111.0ms | ActiveRecord: 4.5ms | Allocations: 14525)
+
+
+Started DELETE "/logout" for ::1 at 2020-12-16 12:35:26 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qthFPR2cq0qWmLkx9NNHtTKnIP0k1nYFQus0lpTjInWqH4dDdER5/o9V6NtAZiQtAtyZW2yTMCr+lp5/wDQwOQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 311)
+
+
+Started GET "/" for ::1 at 2020-12-16 12:35:26 -0500
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.8ms | Allocations: 196)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 2745)
+
+
+Started GET "/login" for ::1 at 2020-12-16 12:35:31 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1760)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms | Allocations: 4601)
+
+
+Started POST "/login" for ::1 at 2020-12-16 12:35:44 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"lzBTgGcUBl9CTL/wKsiZ+gTCRw+bYb0v62PV1CQo6bSbaOartnMFcP8ivx+jPBjqxJqpjMbUH9f/+am9WemYaA==", "user"=>{"username"=>"cat", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "cat"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 320ms (ActiveRecord: 0.5ms | Allocations: 1039)
+
+
+Started GET "/users/1" for ::1 at 2020-12-16 12:35:44 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 8.4ms | Allocations: 851)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.3ms | Allocations: 3934)
+
+
+Started GET "/routines" for ::1 at 2020-12-16 12:35:49 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:4
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  Rendered routines/index.html.erb within layouts/application (Duration: 109.1ms | Allocations: 12542)
+Completed 200 OK in 120ms (Views: 114.5ms | ActiveRecord: 4.6ms | Allocations: 15332)
+
+
+Started GET "/routines/42" for ::1 at 2020-12-16 12:35:50 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:74:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `current_user'
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:12
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:18
+  Rendered routines/show.html.erb within layouts/application (Duration: 20.4ms | Allocations: 2484)
+Completed 200 OK in 37ms (Views: 27.3ms | ActiveRecord: 2.0ms | Allocations: 5224)
+
+
+Started GET "/products/1/new" for ::1 at 2020-12-16 12:59:25 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/products/1/new"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/products/1" for ::1 at 2020-12-16 12:59:34 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ProductsController):
+  
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/about" for ::1 at 2021-02-22 12:44:36 -0500
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/about"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-02-22 12:45:45 -0500
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 1.7ms | Allocations: 213)
+Completed 200 OK in 85ms (Views: 83.4ms | ActiveRecord: 0.0ms | Allocations: 8700)
+
+
+Started GET "/signup" for ::1 at 2021-02-22 12:46:16 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 1.9ms | Allocations: 561)
+  Rendered users/new.html.erb within layouts/application (Duration: 31.7ms | Allocations: 5039)
+Completed 200 OK in 80ms (Views: 49.8ms | ActiveRecord: 1.8ms | Allocations: 14886)
+
+
+Started POST "/users" for ::1 at 2021-02-22 12:46:42 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"NcJOIa0r+XC7ZEopUzJIVwMb04qixJYPOnzlsQERb0z1Aw3W05ulbLKhWFQcjfXGaw9JVpy62H7+5cPqcMlWEg==", "user"=>{"username"=>"Jam", "email"=>"J@jAmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "J@jAmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Jam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Create (3.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Jam"], ["email", "J@jAmail.com"], ["password_digest", "$2a$12$7paiLbd8L4BUhQXX3U55KuPO1433EvvsMEwao7ItgzVWAENgqD/2."], ["created_at", "2021-02-22 17:46:42.834087"], ["updated_at", "2021-02-22 17:46:42.834087"]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://localhost:3000/routines
+Completed 302 Found in 383ms (ActiveRecord: 7.3ms | Allocations: 8616)
+
+
+Started GET "/routines" for ::1 at 2021-02-22 12:46:45 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:4
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  Rendered routines/index.html.erb within layouts/application (Duration: 116.8ms | Allocations: 27732)
+Completed 200 OK in 144ms (Views: 127.3ms | ActiveRecord: 7.2ms | Allocations: 32230)
+
+
+Started GET "/routines/new" for ::1 at 2021-02-22 12:46:55 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 1.2ms | Allocations: 496)
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/_form.html.erb:24
+  Rendered routines/_form.html.erb (Duration: 20.4ms | Allocations: 5334)
+  Rendered routines/new.html.erb within layouts/application (Duration: 24.9ms | Allocations: 6105)
+Completed 200 OK in 74ms (Views: 38.0ms | ActiveRecord: 9.5ms | Allocations: 22184)
+
+
+Started POST "/routines" for ::1 at 2021-02-22 12:47:48 -0500
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"RxDR9rSadEer/gWKHOHKp4CpsYaDXYLWqmCurBkMSuXrSvY0OJQ0foEzf3yxSZe/LNiHcJutEnZxwpHB12EeKA==", "routine"=>{"title"=>"Ma", "season"=>"Winter", "step"=>"Cleanse", "product_id"=>"", "product_attributes"=>{"name"=>"The Ordinary Niacinamide 10% + Zinc 1%", "content"=>"Serum"}}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `current_user'
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:22:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  [1m[36mRoutine Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "routines" WHERE "routines"."title" = ? LIMIT ?[0m  [["title", "Ma"], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  [1m[36mRoutine Load (0.3ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."title" = ? AND "routines"."product_id" IS NULL LIMIT ?[0m  [["title", "Ma"], ["LIMIT", 1]]
+  ↳ app/models/routine.rb:15:in `not_a_duplicate'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  Rendering routines/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 1.0ms | Allocations: 284)
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/_form.html.erb:24
+  Rendered routines/_form.html.erb (Duration: 11.7ms | Allocations: 3513)
+  Rendered routines/new.html.erb within layouts/application (Duration: 14.0ms | Allocations: 3823)
+Completed 200 OK in 94ms (Views: 31.1ms | ActiveRecord: 4.4ms | Allocations: 22695)
+
+
+Started POST "/routines" for ::1 at 2021-02-22 12:48:21 -0500
+Processing by RoutinesController#create as HTML
+  Parameters: {"authenticity_token"=>"CcYVxhP0KUkjVfty/g34jnmTInfzHe+HzbUtzGvJ932lnDIEn/ppcAmYgYRTpaWW1eIUgevtfycWFxKhpaSjsA==", "routine"=>{"title"=>"Ma", "season"=>"Winter", "step"=>"Cleanse", "product_id"=>"1", "product_attributes"=>{"name"=>"", "content"=>""}}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `current_user'
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:21:in `create'
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:22:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  [1m[36mRoutine Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "routines" WHERE "routines"."title" = ? LIMIT ?[0m  [["title", "Ma"], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  [1m[36mRoutine Load (0.2ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."title" = ? AND "routines"."product_id" = ? LIMIT ?[0m  [["title", "Ma"], ["product_id", 1], ["LIMIT", 1]]
+  ↳ app/models/routine.rb:15:in `not_a_duplicate'
+  [1m[36mRoutine Create (3.9ms)[0m  [1m[32mINSERT INTO "routines" ("title", "season", "step", "created_at", "updated_at", "product_id", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Ma"], ["season", "Winter"], ["step", "Cleanse"], ["created_at", "2021-02-22 17:48:21.881554"], ["updated_at", "2021-02-22 17:48:21.881554"], ["product_id", 1], ["user_id", 12]]
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/routines_controller.rb:25:in `create'
+Redirected to http://localhost:3000/routines/44
+Completed 302 Found in 47ms (ActiveRecord: 9.0ms | Allocations: 9635)
+
+
+Started GET "/routines/44" for ::1 at 2021-02-22 12:48:21 -0500
+Processing by RoutinesController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/routines_controller.rb:74:in `set_routine'
+  Rendering routines/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `current_user'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/routines/show.html.erb:18
+  Rendered routines/show.html.erb within layouts/application (Duration: 23.8ms | Allocations: 3663)
+Completed 200 OK in 41ms (Views: 35.1ms | ActiveRecord: 1.3ms | Allocations: 6536)
+
+
+Started GET "/products" for ::1 at 2021-02-22 12:49:02 -0500
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1829)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.9ms | Allocations: 5193)
+
+
+Started GET "/routines/new" for ::1 at 2021-02-22 12:49:17 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 1.3ms | Allocations: 157)
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/_form.html.erb:24
+  Rendered routines/_form.html.erb (Duration: 14.2ms | Allocations: 3559)
+  Rendered routines/new.html.erb within layouts/application (Duration: 16.6ms | Allocations: 3870)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.7ms | Allocations: 7151)
+
+
+Started GET "/routines" for ::1 at 2021-02-22 12:49:23 -0500
+Processing by RoutinesController#index as HTML
+  Rendering routines/index.html.erb within layouts/application
+  [1m[36mRoutine Load (0.4ms)[0m  [1m[34mSELECT "routines".* FROM "routines"[0m
+  ↳ app/views/routines/index.html.erb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:8
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/routines/index.html.erb:9
+  Rendered routines/index.html.erb within layouts/application (Duration: 78.7ms | Allocations: 14078)
+Completed 200 OK in 91ms (Views: 84.2ms | ActiveRecord: 5.7ms | Allocations: 16463)
+
+
+Started GET "/routines/new" for ::1 at 2021-02-22 12:49:28 -0500
+Processing by RoutinesController#new as HTML
+  Rendering routines/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 15)
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/routines/_form.html.erb:24
+  Rendered routines/_form.html.erb (Duration: 8.6ms | Allocations: 2766)
+  Rendered routines/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 2831)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.5ms | Allocations: 5063)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mRoutine Load (0.5ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mRoutine Load (0.7ms)[0m  [1m[34mSELECT "routines".* FROM "routines" WHERE "routines"."user_id" = ? ORDER BY "routines"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveUserIdFromProducts (20210225111737)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproducts" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "content" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "review_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aproducts" ("id","name","created_at","updated_at","content","user_id","review_id")
+                     SELECT "id","name","created_at","updated_at","content","user_id","review_id" FROM "products"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "content" varchar DEFAULT NULL, "review_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "products" ("id","name","created_at","updated_at","content","review_id")
+                     SELECT "id","name","created_at","updated_at","content","review_id" FROM "aproducts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aproducts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210225111737"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveReviewIdFromProducts (20210225111918)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproducts" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "content" varchar DEFAULT NULL, "review_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aproducts" ("id","name","created_at","updated_at","content","review_id")
+                     SELECT "id","name","created_at","updated_at","content","review_id" FROM "products"[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "content" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "products" ("id","name","created_at","updated_at","content")
+                     SELECT "id","name","created_at","updated_at","content" FROM "aproducts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aproducts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210225111918"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

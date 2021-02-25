@@ -17,10 +17,10 @@ class RoutinesController < ApplicationController
 
 
     def create
-        # @routine.product = @product
+        #  @routine.product = @product
         @routine = current_user.routines.build(routine_params)
         @product = Product.find_by(id: params[:routine][:product_id])
-        # @routine.product = @product
+        @routine.product = @product
         # @product = current_user.products.build(product_params)
         if @routine.save
             redirect_to routine_path(@routine)
