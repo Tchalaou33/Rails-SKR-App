@@ -21,7 +21,7 @@
 
     <%= f.label :product_id, "Select a Product" %> 
     <div>
-        <%= f.collection_select :product_id, Product.all, :id, :name, prompt: true %>
+        <%= f.collection_select :product_id, current_user.products, :id, :name, prompt: true %>
         
     </div>
 

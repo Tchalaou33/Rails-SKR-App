@@ -1,9 +1,22 @@
 <h1> All Products </h1>
 
 
+
 <% @products.all.each do |product| %>
-    <%= product.name%>
+   <p> <%= product.name%></p>
     
-<br>
+
 <% end %>
 
+
+
+<div>
+<h1> <%= current_user.username%>'s Products</h1>
+
+
+<%current_user.products.each do |product| %>
+    <%=product.name%>
+    <%= @routine.product.content %>
+</div>
+
+<% end %>
