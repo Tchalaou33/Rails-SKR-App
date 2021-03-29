@@ -2,15 +2,15 @@ class RoutinesController < ApplicationController
 
     def new
         # check id it's nested & it's a proper id
-        if params[:prouduct_id] && product = Product.find_by_id(params[:product_id])
+        # if params[:prouduct_id] && product = Product.find_by_id(params[:product_id])
         #     # nested route
-           @routine = product.routines.build #has_many
-        else
-        #     # unnested
+        #    @routine = product.routines.build #has_many
+        # else
+        # #     # unnested
             @routine = Routine.new
             @routine.build_product #belongs_to
-        end  
-
+        # end  
+        # (user:current_user)
         
         # @routine.build_product
     end
@@ -18,9 +18,10 @@ class RoutinesController < ApplicationController
 
     def create
         #  @routine.product = @product
+        # binding.pry
         @routine = current_user.routines.build(routine_params)
-        @product = Product.find_by(id: params[:routine][:product_id])
-        @routine.product = @product
+        # @product = Product.find_by(id: params[:routine][:product_id])
+        # @routine.product = @product
         # @product = current_user.products.build(product_params)
         if @routine.save
             redirect_to routine_path(@routine)
@@ -82,7 +83,7 @@ class RoutinesController < ApplicationController
         # params.require(:product).permit(:name, :content, :prouduct_id, 
         #     product_attributes: [:name])
     
-        params.require(:routine).permit(:title, :season, :step, :product_id, product_attributes: [:name, :content])
+        params.require(:routine).permit(:title, :season, :step, :product_id, product_attributes: [:name, :content, :user_id])
     end
 
     # def product_params

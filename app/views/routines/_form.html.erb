@@ -16,12 +16,12 @@
         <%= f.select(:step, ["Cleanse", "Treat", "Hydreate", "Protect"]) %>
     </div>
 
-    <br></br>
+    
 
 
     <%= f.label :product_id, "Select a Product" %> 
     <div>
-        <%= f.collection_select :product_id, current_user.products, :id, :name, prompt: true %>
+        <%= f.collection_select :product_id, current_user.products, :id, :name, include_blank: true %>
         
     </div>
 
@@ -32,6 +32,7 @@
         <%=f.fields_for :product do |p| %>
             <%= p.label :name %>
             <%= p.text_field :name %>
+            <%= p.hidden_field :user_id, value: current_user.id %>
     </div>
     <div>    
             <%= p.label :content %>
