@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
   resources :users
   
-  get '/auth/google_oauth2/callback' => 'sessions#oauth'
+  post '/auth/provider/callback' => 'sessions#omniauth'
  
 
   resources :products do

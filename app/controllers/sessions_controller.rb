@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
     
     def oauth
         # call oauth method here
-        @user = User.find_with_oauth(auth)
+        @user = User.find_with_omniauth(auth)
         if @user
             session[:user_id] = @user.id
             redirect_to user_path(@user)  
