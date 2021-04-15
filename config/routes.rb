@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
   resources :users
   
-  get '/auth/google_oauth2/callback' => 'sessions#create'
-
+  get '/auth/google_oauth2/callback' => 'sessions#oauth'
+ 
 
   resources :products do
     resources :routines, only: [:new, :create, :index]

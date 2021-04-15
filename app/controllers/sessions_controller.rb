@@ -16,6 +16,11 @@ class SessionsController < ApplicationController
         end
     end
     
+    def oauth
+        
+    end
+
+    end
     def home
     end
 

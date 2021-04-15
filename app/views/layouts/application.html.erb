@@ -17,7 +17,7 @@
       <%= link_to 'Create New Routine', new_routine_path %>
       <%= link_to 'All Products', products_path %>
     <% else %>
-      <%= link_to 'Sign Up With Google', '/auth/google_oauth2' %>
+      <%= button_to 'Sign Up With Google', '/auth/google_oauth2', method: :post %>
 
     <% end %>
 
