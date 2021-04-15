@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
   
-  resources :reviews
-  resources :products
-  resources :routines
-
-  # THIS LINE OF CODE IS THE INDEX OR HOME. i'M CALLING IT WELCOME
+   # THIS LINE OF CODE IS THE INDEX OR HOME. i'M CALLING IT WELCOME
   root 'sessions#welcome' 
+
+  resources :reviews
+  resources :routines, except: [:index]
+  resources :products do
+    resources :routines, only: [:new, :create, :index]
+  end
+
 
   get '/signup' => 'users#new'
   get '/login' => 'sessions#new'
@@ -15,9 +18,5 @@ Rails.application.routes.draw do
   
   post '/auth/provider/callback' => 'sessions#omniauth'
  
-
-  resources :products do
-    resources :routines, only: [:new, :create, :index]
-  end
   
 end
