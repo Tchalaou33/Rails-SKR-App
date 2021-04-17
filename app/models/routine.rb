@@ -10,7 +10,15 @@ class Routine < ApplicationRecord
 
     def product_attributes=(product)
 
-      self.product = Product.find_or_create_by(name: product[:name])
+      # self.product = Product.find_by(name: product[:name])
+      if self.product = Product.find_by(name: product[:name])
+        self.product.update(content: product[:content])
+      else
+        self.product = Product.create(product)
+
+
+      end
+
       # self.product.update(product)
     end
 
