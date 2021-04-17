@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 # Signup
     def create
         @user = User.new(user_params)
-        if @user.save #@user.errors
+        if @user.save 
             #login
             session[:user_id] = @user.id
             redirect_to routines_path
@@ -16,11 +16,6 @@ class UsersController < ApplicationController
             render :new
         end
     end
-
-    # def show
-    #     @user = User.find_by_id(params[:id])
-    #     redirect_to '/' if !@user
-    # end
 
     private
 
