@@ -17,7 +17,6 @@ class ProductsController < ApplicationController
    
     def index
         @products = Product.all.alpha
-        # @products = Product.alpha
     
         # @products = Product.find_by(id: params[:id])
     end
