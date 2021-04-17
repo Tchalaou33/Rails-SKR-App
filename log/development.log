@@ -30930,3 +30930,78 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 46ms (Views: 42.1ms | ActiveRecord: 1.4ms | Allocations: 5910)
 
 
+Started GET "/" for ::1 at 2021-04-17 05:42:35 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 1.5ms | Allocations: 341)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms | Allocations: 7364)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-04-17 05:42:39 -0400
+Started GET "/auth/google_oauth2/callback?state=f767133640c9770d2122c2fbb25683405315f27d2e7a9ce5&code=4%2F0AY0e-g7BcMILBkNbab81rKGs_MgTVTLMfby2Q_7EhuMctPiF9kK-zFJivODf2X62b1UEsw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=1&prompt=consent" for ::1 at 2021-04-17 05:42:42 -0400
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"f767133640c9770d2122c2fbb25683405315f27d2e7a9ce5", "code"=>"4/0AY0e-g7BcMILBkNbab81rKGs_MgTVTLMfby2Q_7EhuMctPiF9kK-zFJivODf2X62b1UEsw", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "prompt"=>"consent", "provider"=>"google_oauth2"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 5696)
+
+
+  
+NoMethodError (undefined method `find_with_omniauth' for #<Class:0x00007fffd1293dc0>):
+  
+app/controllers/sessions_controller.rb:21:in `omniauth'
+Started GET "/auth/google_oauth2/callback?state=f767133640c9770d2122c2fbb25683405315f27d2e7a9ce5&code=4%2F0AY0e-g4GXQ4oj_hZm0yTgn0H6ULLnjtaYoX1R06TijlKN8nHD7sIJq14-HfglZ0JpNSpGA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=1&prompt=consent" for ::1 at 2021-04-17 05:48:11 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"f767133640c9770d2122c2fbb25683405315f27d2e7a9ce5", "code"=>"4/0AY0e-g4GXQ4oj_hZm0yTgn0H6ULLnjtaYoX1R06TijlKN8nHD7sIJq14-HfglZ0JpNSpGA", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "prompt"=>"consent", "provider"=>"google_oauth2"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 759466ms (ActiveRecord: 0.0ms | Allocations: 29805)
+
+
+Started GET "/login" for ::1 at 2021-04-17 06:00:51 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (Duration: 20.7ms | Allocations: 3501)
+Completed 200 OK in 42ms (Views: 30.1ms | ActiveRecord: 0.9ms | Allocations: 13016)
+
+
+Started GET "/login" for ::1 at 2021-04-17 06:01:08 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (Duration: 1.2ms | Allocations: 757)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 2708)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-04-17 06:01:12 -0400
+Started GET "/auth/google_oauth2/callback?state=7d92093aaa3ee8b8190c1219ae8d34f9ea707e35c245deb0&code=4%2F0AY0e-g6LgUK2xqj8HU5HjTwyL32Slpa7q7pmZXd7K_yU0P_W17_fwL175Xdsj29pPGST8g&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=1&prompt=consent" for ::1 at 2021-04-17 06:01:15 -0400
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"7d92093aaa3ee8b8190c1219ae8d34f9ea707e35c245deb0", "code"=>"4/0AY0e-g6LgUK2xqj8HU5HjTwyL32Slpa7q7pmZXd7K_yU0P_W17_fwL175Xdsj29pPGST8g", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."email" IS NULL LIMIT ?[0m  [["uid", "109308794088573052696"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:14:in `find_with_omniauth'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:14:in `find_with_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "attchalaou@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:14:in `find_with_omniauth'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Andrea Tinsley Tchalaou"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:14:in `find_with_omniauth'
+  [1m[36mUser Create (2.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "uid") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "Andrea Tinsley Tchalaou"], ["email", "attchalaou@gmail.com"], ["password_digest", "$2a$12$r/D0xUJGnhBCSoRX46IBGuBAobQ00ubC0NYIOv.cwPjvphLae8jLm"], ["created_at", "2021-04-17 10:01:15.939542"], ["updated_at", "2021-04-17 10:01:15.939542"], ["uid", "109308794088573052696"]]
+  ↳ app/models/user.rb:14:in `find_with_omniauth'
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:14:in `find_with_omniauth'
+Redirected to http://localhost:3000/users/16
+Completed 302 Found in 201ms (ActiveRecord: 5.6ms | Allocations: 8966)
+
+
+Started GET "/users/16" for ::1 at 2021-04-17 06:01:15 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"16"}
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `current_user'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 16]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 15.6ms | Allocations: 5712)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 1.0ms | Allocations: 8326)
+
+
