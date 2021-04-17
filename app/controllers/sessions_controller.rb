@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
         end
     end
     
-    def oauth
+    def omniauth
         # call oauth method here
         @user = User.find_with_omniauth(auth)
         if @user
