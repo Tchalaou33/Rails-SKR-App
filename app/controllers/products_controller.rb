@@ -18,31 +18,10 @@ class ProductsController < ApplicationController
     def index
         @products = Product.all.alpha
     
-        # @products = Product.find_by(id: params[:id])
     end
-
-
-    # def edit
-    #     set_product
-    # end
-    
-    # def update
-    #     set_product
-    #     if @product.update(prodcut_params)
-    #         redirect_to products_path
-    #     else
-    #         render :edit
-    #     end
-    # end
 
      private
 
-    # def set_product
-    #     @product = Product.find_by(content: params[:content])
-    #     if !@product
-    #         redirect_to products_path
-    #     end
-    # end
 
     def product_params
         params.require(:product).permit(:name, :content)

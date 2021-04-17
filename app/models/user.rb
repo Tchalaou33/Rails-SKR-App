@@ -8,8 +8,8 @@ class User < ApplicationRecord
     validates :email, :username, presence: true 
     validates :email, :username, uniqueness: true
 
-    def self.find_with_omniauth(auth)
-        binding.pry
-    end
+    # def self.find_with_omniauth(auth)
+    #     binding.pry
+    # end
 
 end
