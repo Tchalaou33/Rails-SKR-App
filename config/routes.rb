@@ -3,8 +3,12 @@ Rails.application.routes.draw do
 
   root 'sessions#welcome' 
 
-  resources :reviews
+  resources :reviews do
+   resources :routines 
+  end
+
   resources :routines
+  
   resources :products do
     resources :routines, only: [:new, :create, :index]
   end
@@ -14,7 +18,7 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
-  resources :users
+  resources :users, only: [:show, :edit, :update, :create]
   
   get '/auth/:provider/callback' => 'sessions#omniauth'
  
