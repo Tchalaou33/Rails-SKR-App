@@ -7,6 +7,12 @@ class Product < ApplicationRecord
 
     scope :alpha, -> {order(:name)}
 
-  
-
 end
+
+
+# "/routine/1/products/new"
+
+# "/routine/:routine_id/products/:id"
+
+# params[:routine_id]
+# params[:id]
