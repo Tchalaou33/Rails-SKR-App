@@ -69,9 +69,6 @@ class RoutinesController < ApplicationController
         params.require(:routine).permit(:title, :season, :step, :product_id, product_attributes: [:name, :content, :user_id])
     end
 
-   
-    
-
 
    
 end
