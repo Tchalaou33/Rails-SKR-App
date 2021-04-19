@@ -11,7 +11,6 @@ class UsersController < ApplicationController
         if @user.save 
             #login
             session[:user_id] = @user.id
-
             redirect_to routines_path
             # redirect_to users_path
         else

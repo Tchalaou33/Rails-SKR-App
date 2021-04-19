@@ -1,0 +1,8 @@
+
+Original Posting: <%= link_to @review.routine.title, routine_path(@review) %>
+<br>
+<strong><%= @review.user.username %></strong> says: - <%= @review.content %>
+<% if @review.user == current_user %>
+  <p><%= link_to "Edit Review", edit_review_path(@review)%></p>
+  <p><%= button_to "Delete Review", review_path(@review), method: :delete %></p>
+<% end %>

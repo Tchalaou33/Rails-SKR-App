@@ -1,0 +1,14 @@
+<% if @routine %>
+  <h1>Reviews for <%= @routine.title %></h1>
+<% else %>
+  <h1>All Reviews</h1>
+<% end %>
+<br>
+<ul>
+  <% @reviews.each do |r| %>
+    <li><strong><%= link_to r.routine.title, routine_path(r.routine_id) %></strong></li>
+    <strong><%= r.user.username %> says:</strong> "<%= r.content%>"
+    <br>
+    <br>
+  <% end %>
+</ul>
