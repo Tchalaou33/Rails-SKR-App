@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_06_155343) do
+ActiveRecord::Schema.define(version: 2021_04_19_072401) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
@@ -21,9 +21,11 @@ ActiveRecord::Schema.define(version: 2021_04_06_155343) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "content"
+    t.integer "user_id"
+    t.integer "routine_id"
   end
 
   create_table "routines", force: :cascade do |t|
@@ -42,7 +44,7 @@ ActiveRecord::Schema.define(version: 2021_04_06_155343) do
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "uid"
+    t.decimal "uid"
   end
 
 end
