@@ -23,4 +23,15 @@
 <% end %>
 
 
+<p><%= link_to "Leave a Comment or Review", new_review_routine_path(@routine) %></p>
+<br>
+
+<h3>Comments & Reviews:</h3>
+<% @routine.reviews.each do |r| %>
+<li>
+  by <strong><%= link_to r.user.username, review_routine_path(@routine, r) %></strong>: "<%= r.content %>"
+</li>
+<% end %>
+
 <a href="/routines">Back</a>
+
