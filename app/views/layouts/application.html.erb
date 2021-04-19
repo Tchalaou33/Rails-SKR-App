@@ -12,10 +12,12 @@
   <div class="nav">
 
     <% if logged_in? %>
-      <%= button_to 'Log Out', logout_path, method: :delete %>
-      <%= link_to 'All Routines', routines_path %>
-      <%= link_to 'Create New Routine', new_routine_path %>
+      <%= button_to 'Log Out', logout_path, method: :delete %> |
+      <%= link_to 'All Routines', routines_path %> |
+      <%= link_to 'Create New Routine', new_routine_path %> |
       <%= link_to 'All Products', products_path %>
+      <%= link_to "Add A Review", new_review_path %> |
+      <%= link_to "All Reviews ", reviews_path %> |
     <% else %>
       <%= button_to 'Sign Up With Google', '/auth/google_oauth2', method: :post %>
 
