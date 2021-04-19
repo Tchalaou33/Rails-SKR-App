@@ -16,9 +16,13 @@ class ProductsController < ApplicationController
     end
    
     def index
-        @products = Product.all.alpha
+        @products = Product.all.alpha.includes(:routines)
     
     end
+
+    # def show
+    #     @category = Category.find_by_id(params[:id])
+    # end
 
      private
 
