@@ -6,6 +6,7 @@ class User < ApplicationRecord
     has_many :routined_products, through: :routines, source: :product
 
     has_many :products
+    has_many :reviews
 
     validates :email, :username, presence: true 
     validates :email, :username, uniqueness: true
